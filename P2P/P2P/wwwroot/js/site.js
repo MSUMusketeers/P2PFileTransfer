@@ -1,4 +1,24 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Site.js - Common JavaScript functions
 
-// Write your JavaScript code.
+// Smooth scrolling for anchor links
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('a[href^="#"]')
+
+    for (const link of links) {
+        link.addEventListener("click", function (e) {
+            const href = this.getAttribute("href")
+
+            if (href !== "#") {
+                e.preventDefault()
+
+                const target = document.querySelector(href)
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                    })
+                }
+            }
+        })
+    }
+})
+

@@ -3,47 +3,56 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - P2P</title>
+    <title>@ViewData["Title"] - FileFlow</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/P2P.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">P2P</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="sticky-top border-bottom bg-white">
+        <div class="container d-flex align-items-center" style="height: 64px;">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="d-flex align-items-center gap-2 text-decoration-none">
+                <span class="fs-4 fw-bold gradient-text">FileFlow</span>
+            </a>
+            <nav class="ms-auto d-flex gap-4">
+                <a href="#how-it-works" class="text-decoration-none small fw-medium text-muted hover-text-dark">
+                    How It Works
+                </a>
+                <a href="#features" class="text-decoration-none small fw-medium text-muted hover-text-dark">
+                    Features
+                </a>
+            </nav>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - P2P - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="border-top bg-light">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-4 py-4" style="min-height: 96px;">
+            <div class="d-flex flex-column flex-md-row align-items-center gap-4 px-md-0">
+                <p class="text-center text-md-start small text-muted mb-0">
+                    Built with care by FileFlow. No cookies, no tracking.
+                </p>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+                <a href="https://github.com" target="_blank" rel="noreferrer" class="text-decoration-none">
+                    <i class="bi bi-github text-muted hover-text-dark"></i>
+                    <span class="visually-hidden">GitHub</span>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noreferrer" class="text-decoration-none">
+                    <i class="bi bi-twitter text-muted hover-text-dark"></i>
+                    <span class="visually-hidden">Twitter</span>
+                </a>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+

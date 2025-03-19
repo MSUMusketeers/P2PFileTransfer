@@ -1,8 +1,214 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model FileViewModel
+@{
+    ViewData["Title"] = "FileFlow - Secure P2P File Transfer";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="container py-12 md-py-24 lg-py-32 space-y-8">
+    <div class="mx-auto flex max-w-58rem flex-col items-center space-y-4 text-center">
+        <h1 class="text-3xl font-bold leading-tight tracking-tighter md-text-5xl lg-text-6xl lg-leading-1-1">
+            Share files directly,<br />
+            <span class="gradient-text">no cloud required</span>
+        </h1>
+        <p class="max-w-36rem text-muted-foreground md-text-xl">
+            Secure, fast, and simple peer-to-peer file transfers. No sign-up, no storage limits, no tracking.
+        </p>
+    </div>
+
+    <div class="mx-auto w-full max-w-3xl">
+        <div class="card border-2 border-dashed">
+            <div class="card-content p-6">
+                @if (!Model.IsSharing)
+                {
+                    <div class="space-y-6">
+                        <form method="post" enctype="multipart/form-data" asp-action="StartSharing">
+                            <div class="flex flex-col items-center justify-center rounded-lg border border-dashed p-12 text-center file-drop-area"
+                                 id="dropZone">
+                                <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-muted">
+                                    <i class="file-icon"></i>
+                                </div>
+                                <h3 class="mt-4 text-lg font-medium">
+                                    Drag & drop your files here
+                                </h3>
+                                <p class="mt-2 text-sm text-muted-foreground">
+                                    or click to browse files from your device
+                                </p>
+                                <label for="file-upload" class="mt-4">
+                                    <div class="btn btn-primary">
+                                        Select Files
+                                    </div>
+                                    <input id="file-upload"
+                                           type="file"
+                                           name="Files"
+                                           multiple
+                                           class="sr-only"
+                                           onchange="handleFileSelect(event)" />
+                                </label>
+                            </div>
+
+                            <div id="selected-files-container" class="space-y-4 mt-4" style="display: none;">
+                                <h4 class="text-sm font-medium">Selected Files</h4>
+                                <div id="selected-files" class="space-y-2">
+                                    <!-- Files will be added here dynamically -->
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    Start Sharing <i class="arrow-right-icon ml-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <div class="space-y-6">
+                        <div class="text-center">
+                            <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-amber-100">
+                                <i class="share-icon"></i>
+                            </div>
+                            <h3 class="mt-4 text-lg font-medium">
+                                Ready to share!
+                            </h3>
+                            <p class="mt-2 text-sm text-muted-foreground">
+                                Share this code or QR with the recipient to start the transfer
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col items-center justify-center space-y-4">
+                            <div class="text-2xl font-bold tracking-wider gradient-text">
+                                @Model.ShareCode
+                            </div>
+                            <div id="qrcode"></div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-sm">
+                                <span>Transfer progress</span>
+                                <span id="progress-percentage">@Model.Progress%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" id="progress-bar" style="width: @Model.Progress%"></div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                            <form method="post" asp-action="ResetSharing">
+                                <button type="submit" class="btn btn-outline w-100">
+                                    Cancel Transfer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<partial name="_HowItWorks" />
+<partial name="_Features" />
+
+@section Scripts {
+    <script src="~/lib/qrcodejs/qrcode.min.js"></script>
+    <script>
+        // Initialize QR code if sharing
+        document.addEventListener('DOMContentLoaded', function() {
+            const shareCode = '@Model.ShareCode';
+            if (shareCode) {
+                new QRCode(document.getElementById("qrcode"), {
+                    text: shareCode,
+                    width: 200,
+                    height: 200
+                });
+
+                // Simulate progress for demo
+                let progress = @Model.Progress;
+                const interval = setInterval(() => {
+                    progress += 5;
+                    document.getElementById('progress-percentage').textContent = progress + '%';
+                    document.getElementById('progress-bar').style.width = progress + '%';
+
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                    }
+                }, 300);
+            }
+        });
+
+        // File handling
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            if (files.length > 0) {
+                displayFiles(files);
+            }
+        }
+
+        function displayFiles(files) {
+            const container = document.getElementById('selected-files');
+            container.innerHTML = '';
+
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+
+                const fileElement = document.createElement('div');
+                fileElement.className = 'flex items-center justify-between rounded-md border px-4 py-2';
+                fileElement.innerHTML = `
+                    <div class="flex items-center space-x-2">
+                        <i class="file-icon small"></i>
+                        <span class="text-sm">${file.name}</span>
+                        <span class="text-xs text-muted-foreground">
+                            (${fileSize} MB)
+                        </span>
+                    </div>
+                    <button type="button" class="btn btn-icon" onclick="removeFile(this, ${i})">
+                        <i class="x-icon"></i>
+                        <span class="sr-only">Remove</span>
+                    </button>
+                `;
+
+                container.appendChild(fileElement);
+            }
+
+            document.getElementById('selected-files-container').style.display = 'block';
+        }
+
+        function removeFile(button, index) {
+            const fileInput = document.getElementById('file-upload');
+            const container = document.getElementById('selected-files');
+
+            // Remove the file element from the display
+            button.closest('.flex').remove();
+
+            // If no more files, hide the container
+            if (container.children.length === 0) {
+                document.getElementById('selected-files-container').style.display = 'none';
+            }
+
+            // Note: In a real implementation, you would need to handle the FileList
+            // which is immutable. For a complete solution, you would use FormData
+            // when submitting the form.
+        }
+
+        // Drag and drop handling
+        const dropZone = document.getElementById('dropZone');
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('drag-over');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+
+            if (e.dataTransfer.files.length > 0) {
+                document.getElementById('file-upload').files = e.dataTransfer.files;
+                displayFiles(e.dataTransfer.files);
+            }
+        });
+    </script>
+}
+
