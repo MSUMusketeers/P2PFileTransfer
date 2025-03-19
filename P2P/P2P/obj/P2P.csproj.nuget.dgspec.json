@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {}
+    "C:\\Users\\Vyom\\OneDrive\\Desktop\\.net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {}
   },
   "projects": {
-    "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {
+    "C:\\Users\\Vyom\\OneDrive\\Desktop\\.net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
+        "projectUniqueName": "C:\\Users\\Vyom\\OneDrive\\Desktop\\.net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
         "projectName": "P2P",
-        "projectPath": "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
-        "packagesPath": "C:\\Users\\YASH SOLANKI\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\obj\\",
+        "projectPath": "C:\\Users\\Vyom\\OneDrive\\Desktop\\.net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
+        "packagesPath": "C:\\Users\\Vyom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vyom\\OneDrive\\Desktop\\.net Project\\P2PFileTransfer\\P2P\\P2P\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\YASH SOLANKI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vyom\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -67,24 +66,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.20, 7.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -93,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
