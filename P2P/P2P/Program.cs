@@ -31,7 +31,7 @@ namespace P2P
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Signup}/{id?}");
 
             app.Run();
         }
