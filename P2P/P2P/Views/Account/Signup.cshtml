@@ -3,33 +3,39 @@
 }
 
 <!-- Modern Signup Container -->
-<div class="vh-100 d-flex justify-content-center align-items-center bg-light">
+<div class="min-vh-100 d-flex justify-content-center align-items-center bg-light">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-5">
                 <!-- Signup Card with Animation -->
-                <div class="card border-0 shadow-lg rounded-4 overflow-hidden" style="transform: translateY(0); transition: transform 0.3s ease;">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden signup-card">
                     <!-- Card Header -->
-                    <div class="card-header border-0 py-4 text-center text-white position-relative" style="background-color: #FF9B18;">
-                        <h3 class="fw-bold mb-0">Create Account</h3>
+                    <div class="card-header border-0 py-4 text-center text-white" style="background-color: #FF9B18;">
+                        <h2 class="fw-bold mb-0">Create Account</h2>
                     </div>
 
-                    <div class="card-body p-4">
+                    <div class="card-body p-4 p-lg-5">
                         <!-- Signup Form -->
                         <form asp-action="Signup" method="post" class="mt-3">
                             <!-- Full Name Input -->
-                            <div class="mb-4 position-relative">
+                            <div class="mb-4">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text bg-light border-end-0">
                                         <i class="fas fa-user" style="color: #FF9B18;"></i>
                                     </span>
                                     <input type="text" class="form-control border-start-0 ps-0"
-                                           id="name" name="FullName" required placeholder="Full Name">
+                                           id="name" name="FullName" required placeholder="UserName">
                                 </div>
+                                @if (ViewBag.UserMessage != null)
+                                {
+                                    <div class="alert alert-info mt-2">
+                                        @ViewBag.UserMessage
+                                    </div>
+                                }
                             </div>
 
                             <!-- Email Input -->
-                            <div class="mb-4 position-relative">
+                            <div class="mb-4">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text bg-light border-end-0">
                                         <i class="fas fa-envelope" style="color: #FF9B18;"></i>
@@ -37,10 +43,16 @@
                                     <input type="email" class="form-control border-start-0 ps-0"
                                            id="email" name="Email" required placeholder="Email address">
                                 </div>
+                                @if (ViewBag.Message != null)
+                                {
+                                    <div class="alert alert-info mt-2">
+                                        @ViewBag.Message
+                                    </div>
+                                }
                             </div>
 
                             <!-- Password Input -->
-                            <div class="mb-4 position-relative">
+                            <div class="mb-4">
                                 <div class="input-group input-group-lg">
                                     <span class="input-group-text bg-light border-end-0">
                                         <i class="fas fa-lock" style="color: #FF9B18;"></i>
@@ -56,44 +68,48 @@
                             <!-- Terms and Conditions -->
                             <div class="mb-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="terms" required style="border-color: #FF9B18;">
+                                    <input class="form-check-input" type="checkbox" id="terms" required
+                                           style="border-color: #FF9B18; cursor: pointer;">
                                     <label class="form-check-label" for="terms">
-                                        I agree to the <a href="#" style="color: #FF9B18;">Terms of Service</a> and <a href="#" style="color: #FF9B18;">Privacy Policy</a>
+                                        I agree to the <a href="#" class="text-decoration-none" style="color: #FF9B18;">Terms of Service</a> and
+                                        <a href="#" class="text-decoration-none" style="color: #FF9B18;">Privacy Policy</a>
                                     </label>
                                 </div>
                             </div>
 
                             <!-- Signup Button -->
-                            <button type="submit" class="btn btn-lg w-100 mb-4 fw-bold text-uppercase text-white" style="background-color: #FF9B18; border-color: #FF9B18;">
+                            <button type="submit" class="btn btn-lg w-100 mb-4 fw-bold text-uppercase text-white"
+                                    style="background-color: #FF9B18; border-color: #FF9B18;">
                                 Sign Up
                             </button>
 
                             <!-- Divider -->
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="border-bottom flex-grow-1"></div>
-                                <div class="px-3 text-secondary">or sign up with</div>
-                                <div class="border-bottom flex-grow-1"></div>
+                            <div class="position-relative my-4">
+                                <hr>
+                                <div class="position-absolute top-50 start-50 translate-middle px-3 bg-white text-secondary">
+                                    or sign up with
+                                </div>
                             </div>
 
                             <!-- Social Signup -->
                             <div class="d-flex justify-content-center gap-3 mb-4">
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2 social-btn">
                                     <i class="fab fa-google"></i>
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2 social-btn">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2 social-btn">
                                     <i class="fab fa-apple"></i>
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2 social-btn">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </div>
 
                             <!-- Login Link -->
                             <div class="text-center">
-                                <p class="mb-0">Already have an account? <a asp-action="Login" style="color: #FF9B18;" class="fw-bold">Login</a></p>
+                                <p class="mb-0">Already have an account? <a asp-action="Login" style="color: #FF9B18;" class="fw-bold text-decoration-none">Login</a></p>
                             </div>
                         </form>
                     </div>
@@ -102,6 +118,52 @@
         </div>
     </div>
 </div>
+
+<!-- Custom CSS -->
+<style>
+    .signup-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .signup-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+        }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+        .social-btn:hover {
+            background-color: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+    .form-control:focus, .form-check-input:checked {
+        border-color: #FF9B18;
+        box-shadow: 0 0 0 0.25rem rgba(255, 155, 24, 0.25);
+    }
+
+    .btn-outline-secondary:hover {
+        border-color: #FF9B18;
+        color: #FF9B18;
+        background-color: transparent;
+    }
+
+    .input-group:focus-within {
+        box-shadow: 0 0 0 0.25rem rgba(255, 155, 24, 0.25);
+    }
+
+        .input-group:focus-within .input-group-text,
+        .input-group:focus-within .form-control {
+            border-color: #FF9B18;
+        }
+</style>
 
 <!-- Password Visibility Toggle -->
 <script>
@@ -119,19 +181,6 @@
             icon.classList.add("fa-eye");
         }
     }
-
-    // Optional: Add hover effect to signup card
-    document.addEventListener("DOMContentLoaded", function() {
-        const signupCard = document.querySelector(".card");
-
-        signupCard.addEventListener("mouseenter", function() {
-            this.style.transform = "translateY(-5px)";
-        });
-
-        signupCard.addEventListener("mouseleave", function() {
-            this.style.transform = "translateY(0)";
-        });
-    });
 </script>
 
 <!-- Bootstrap & FontAwesome -->

@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-namespace P2P
+using P2P.Context;
+using Microsoft.EntityFrameworkCore;
+namespace P2P.Models
 {
     public class Program
     {
@@ -11,6 +13,8 @@ namespace P2P
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("localDb")));
 
             var app = builder.Build();
 
@@ -31,7 +35,7 @@ namespace P2P
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Account}/{action=Signup}/{id?}");
+                pattern: "{controller=Account}/{action=Login}/{id?}");
 
             app.Run();
         }
