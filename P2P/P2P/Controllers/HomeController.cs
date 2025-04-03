@@ -17,8 +17,9 @@ namespace P2P.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string? sessionId = null)
         {
+            ViewBag.SessionId = sessionId;
             return View(new FileViewModel());
         }
 
@@ -31,13 +32,14 @@ namespace P2P.Controllers
             model.ShareCode = "FLOW" + Guid.NewGuid().ToString().Substring(0, 6).ToUpper();
             model.Progress = 0;
 
-            return View("Index", model);
+            return Accepted();
         }
 
         [HttpPost]
-        public IActionResult ResetSharing()
+        public IActionResult StartSharing(IFormFileCollection Files)
         {
-            return RedirectToAction("Index");
+            // Your existing file handling logic
+            return Json(new { shareCode = "generated-code-here" });
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
