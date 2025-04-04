@@ -1,191 +1,200 @@
-﻿@model FileViewModel								
+﻿@* Remove @model directive if FileViewModel is no longer needed by this view *@
 @{
-	ViewData["Title"] = "FileFlow - Secure P2P File Transfer";
+    ViewData["Title"] = "FileFlow - Secure P2P File Transfer";
+    // Determine if this is the sender or receiver view based on ViewBag.SessionId
+    bool isSender = ViewBag.SessionId == null;
 }
 
 <section class="container py-5">
-	<div class="text-center mx-auto mb-5" style="max-width: 800px;">
-		<h1 class="display-4 fw-bold tracking-tighter mb-4">
-			Share files directly,<br>
-			<span class="gradient-text">no cloud required</span>
-		</h1>
-		<p class="lead text-muted">
-			Secure, fast, and simple peer-to-peer file transfers. No sign-up, no storage limits, no tracking.
-		</p>
-	</div>
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1050; width: 350px;">
+        <!-- Alerts will be injected here -->
+    </div>
+    <div class="text-center mx-auto mb-5" style="max-width: 800px;">
+        <h1 class="display-4 fw-bold tracking-tighter mb-4">
+            Share files directly,<br>
+            <span class="gradient-text">no cloud required</span>
+        </h1>
+        <p class="lead text-muted">
+            Secure, fast, and simple peer-to-peer file transfers. No sign-up, no storage limits, no tracking.
+        </p>
+    </div>
 
-	<div class="mx-auto" style="max-width: 800px;">
-		<div class="card border-2 border-dashed">
-			<div class="card-body p-4">
-				@if (ViewBag.sessionId == null)
-				{
-				@* --------- *@
-				@* Sender UI *@
-				@* --------- *@
-					@* ----------------------------- *@
-					@* File Upload UI *@
-					@* ----------------------------- *@
-					<form method="post" enctype="multipart/form-data" action="/Home/StartSharing">
-						<div class="text-center p-5 rounded border border-dashed" id="dropZone">
-							<div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-light mb-4" style="width: 80px; height: 80px;">
-								<i data-lucide="file" class="opacity-75"></i>
-							</div>
-							<h3 class="h5 mb-3">Drag & drop your files here</h3>
-							<p class="text-muted small mb-4">or click to browse files from your device</p>
-							<label for="file-upload" class="mb-0">
-								<div class="btn btn-dark">
-									Select Files
-								</div>
-								<input id="file-upload" type="file" name="Files" multiple class="d-none" onchange="handleFileSelect(event)">
-							</label>
-						</div>
-						<div id="selected-files-container" class="mt-4 d-none">
-							<h4 class="fw-medium fs-6 mb-3">Selected Files</h4>
-							<div id="selected-files" class="mb-3">
-								<!-- Files will be added here dynamically -->
-							</div>
-							<button type="submit" class="btn btn-dark w-100">
-								Start Sharing <i data-lucide="arrow-right" class="ms-2"></i>
-							</button>
-						</div>
-						<input name="__RequestVerificationToken" type="hidden" value="CfDJ8PBRZCDcpy1Msb7HQ4qwor7RwsF8s0glQBgkKrq1L9ymsdLCzSzp_wwPmR-KOTduyhVWfBCVwK0VjkBXXnixKljP9fTDu2-2Kq2A73iJL2Zc_0GrBKkkUEqvTFduwsxmKon3j0Ic1_WCdjGspjmWQzw">
-					</form>
+    <div class="mx-auto" style="max-width: 800px;">
+        <div class="card border-2 border-dashed">
+            <div class="card-body p-4">
+                @if (isSender)
+                {
+                    @* --------- *@
+                    @* Sender UI *@
+                    @* --------- *@
 
-					@* ----------------------------- *@
-					@* Sharing UI after “Start Sharing” is clicked *@
-					@* ----------------------------- *@
-					<div class="text-center">
-						<div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-warning-soft mb-4" style="width: 80px; height: 80px;">
-							<i data-lucide="share" style="color:var(--bs-primary-dark); width: 32px; height: 32px;"></i>
-						</div>
-						<h3 class="h5 mb-3">Ready to share!</h3>
-						<p class="text-muted small mb-4">
-							Share this code or QR with the recipient to start the transfer
-						</p>
+                    @* --- Wrapper for Upload Section (Initially Visible) --- *@
+                    <div id="sender-upload-section">
+                        @* --- Removed method, enctype, and action; JS handles submit --- *@
+                        <form id="sender-form">
+                            <div class="text-center p-5 rounded border border-dashed" id="dropZone">
+                                <div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-light mb-4" style="width: 80px; height: 80px;">
+                                    <i data-lucide="file" class="opacity-75"></i>
+                                </div>
+                                <h3 class="h5 mb-3">Drag & drop your files here</h3>
+                                <p class="text-muted small mb-4">or click to browse files from your device</p>
+                                <label for="file-upload" class="mb-0">
+                                    <div class="btn btn-dark">
+                                        Select Files
+                                    </div>
+                                    @* Keep name attribute if needed for model binding elsewhere, otherwise optional *@
+                                    <input id="file-upload" type="file" name="Files" multiple class="d-none">
+                                </label>
+                            </div>
+                            <div id="selected-files-container" class="mt-4 d-none">
+                                <h4 class="fw-medium fs-6 mb-3">Selected Files</h4>
+                                <div id="selected-files" class="mb-3">
+                                    <!-- Files will be added here dynamically -->
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100">
+                                    Start Sharing <i data-lucide="arrow-right" class="ms-2"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
 
-						<div class="d-flex flex-column align-items-center gap-4 mb-4">
-							<div id="share-link" class="fs-3 fw-bold tracking-tight gradient-text"></div>
-							<div id="qrcode"></div>
-						</div>
+                    @* --- Wrapper for Sharing Section (Initially Hidden) --- *@
+                    <div id="sender-sharing-section" class="text-center" style="display: none;">
+                        <div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-warning-soft mb-4" style="width: 80px; height: 80px;">
+                            <i data-lucide="share" style="color:var(--bs-primary-dark); width: 32px; height: 32px;"></i>
+                        </div>
+                        <h3 id="sharing-status-title" class="h5 mb-3">Ready to share!</h3>
+                        <p class="text-muted small mb-4">
+                            Share this code or QR with the recipient to start the transfer
+                        </p>
 
-						<div class="mb-4">
-							<div class="d-flex justify-content-between small mb-1">
-								<span>
-									<span>Transfer progress</span>
-									<span id="transfer-stats"></span>
-								</span>
-								<span id="progress-percentage">0%</span>
-							</div>
-							<div class="progress" style="height: 8px;">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" 
-									id="progress-bar" 
-									role="progressbar" 
-									style="width: 0%">
-								</div>
-							</div>
-							<div class="d-flex text-muted justify-content-between small mt-1">
-								<span id="file-name" class="pe-1" style="overflow-wrap: anywhere"></span>
-								<span id="file-number"></span>
-							</div>
-						</div>
+                        <div class="d-flex flex-column align-items-center gap-4 mb-4">
+                            <div id="share-link" class="fs-5 fw-bold tracking-tight gradient-text" style="overflow-wrap: anywhere;"></div>
+                            <div id="qrcode" class="mt-2"></div>
+                        </div>
 
-						<button type="submit" onclick="resetSharing()" class="btn btn-outline-dark w-100">
-							Cancel Transfer
-						</button>
-					</div>
-				}
-				else
-				{
-				@* ----------- *@
-				@* Receiver UI *@
-				@* ----------- *@
-					<div class="text-center">
-						<div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-warning-soft mb-4" style="width: 80px; height: 80px;">
-							<i data-lucide="download" style="color:var(--bs-primary-dark); width: 32px; height: 32px;"></i>
-						</div>
-						<h3 class="h5 mb-3">Ready to download?</h3>
-						<p class="text-muted small mb-4">
-							@* // TODO: Display the file name *@
-							<span id="recipient-file">Waiting for file...</span>
-						</p>
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>
+                                    <span id="progress-label">Transfer progress</span>
+                                    <span id="transfer-stats"></span>
+                                </span>
+                                <span id="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                     id="progress-bar"
+                                     role="progressbar"
+                                     style="width: 0%">
+                                </div>
+                            </div>
+                            <div class="d-flex text-muted justify-content-between small mt-1">
+                                <span id="sender-file-name" class="pe-1" style="overflow-wrap: anywhere"></span> @* Unique ID for Sender *@
+                                <span id="sender-file-number"></span> @* Unique ID for Sender *@
+                            </div>
+                        </div>
 
-						<div class="mb-4">
-							<div class="d-flex justify-content-between small mb-1">
-								<span>
-									<span>Download progress</span>
-									<span id="recipient-transfer-stats"></span>
-								</span>
-								<span id="recipient-progress-percentage">0%</span>
-							</div>
-							<div class="progress" style="height: 8px;">
-								<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-									 id="recipient-progress-bar"
-									 role="progressbar"
-									 style="width: 0%">
-								</div>
-							</div>
-							<div class="d-flex text-muted justify-content-between small mt-1">
-								<span id="file-name" class="pe-1" style="overflow-wrap: anywhere"></span>
-								<span id="file-number"></span>
-							</div>
-						</div>
+                        <div class="mt-4 d-flex gap-2 justify-content-center">
+                            <button type="button" id="cancel-transfer-btn" class="btn btn-outline-danger w-100" style="display: none;">
+                                Cancel Transfer
+                            </button>
+                            <button type="button" id="send-again-btn" class="btn btn-dark w-100" style="display: none;">
+                                Share Again <i data-lucide="refresh-cw" class="ms-2" style="width:16px; height:16px;"></i>
+                            </button>
+                        </div>
+                    </div>
+                }
+                else // Receiver UI
+                {
+                    <div class="text-center">
+                        <div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-warning-soft mb-4" style="width: 80px; height: 80px;">
+                            <i data-lucide="download" style="color:var(--bs-primary-dark); width: 32px; height: 32px;"></i>
+                        </div>
+                        <h3 class="h5 mb-3">Ready to download?</h3>
+                        <p class="text-muted small mb-4">
+                            <span id="recipient-file">Connecting...</span>
+                        </p>
 
-						@* <a id="downloadLink" *@
-						@*    class="btn btn-outline-dark w-100" *@
-						@*    style="display: none;"> *@
-						@* 	Download <i data-lucide="download" class="ms-2"></i> *@
-						@* </a> *@
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between small mb-1">
+                                <span>
+                                    <span>Download progress</span>
+                                    <span id="recipient-transfer-stats"></span>
+                                </span>
+                                <span id="recipient-progress-percentage">0%</span>
+                            </div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                                     id="recipient-progress-bar"
+                                     role="progressbar"
+                                     style="width: 0%">
+                                </div>
+                            </div>
+                            <div class="d-flex text-muted justify-content-between small mt-1">
+                                <span id="recipient-file-name" class="pe-1" style="overflow-wrap: anywhere"></span> @* Unique ID for Receiver *@
+                                <span id="recipient-file-number"></span>@* Unique ID for Receiver *@
+                            </div>
+                        </div>
 
-						<!-- File Confirmation Modal -->
-						<div class="modal fade" id="fileConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="fileConfirmModalLabel" aria-hidden="true">
-							<div class="modal-dialog modal-dialog-centered">
-								<div class="modal-content border-2 border-dashed">
-									<div class="modal-header border-bottom-0">
-										<h5 class="modal-title fw-medium" id="fileConfirmModalLabel">Incoming Files</h5>
-										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-									</div>
-									<div class="modal-body pt-0">
-										<p class="text-muted small mb-3">The sender wants to share the following files:</p>
-										<div id="modal-files-list">
-											<!-- Files will be listed here -->
-										</div>
-									</div>
-									<div class="modal-footer border-top-0">
-										<button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal" onclick="rejectTransfer()">
-											Cancel
-										</button>
-										<button type="button" class="btn btn-dark" onclick="acceptTransfer()">
-											Start Download
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
+                        <div class="mt-4 d-flex gap-2 justify-content-center">
+                            <button type="button" id="receiver-cancel-btn" class="btn btn-outline-danger w-100" style="display: none;">
+                                Cancel Download
+                            </button>
+                        </div>
 
-					</div>
-				}
-			</div>
-		</div>
-	</div>
+                        <!-- File Confirmation Modal -->
+                        <div class="modal fade" id="fileConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="fileConfirmModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content border-2 border-dashed">
+                                    <div class="modal-header border-bottom-0">
+                                        <h5 class="modal-title fw-medium" id="fileConfirmModalLabel">Incoming Files</h5>
+                                        @* --- Removed onclick, will use JS listener --- *@
+                                        <button type="button" id="modal-close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body pt-0">
+                                        <p class="text-muted small mb-3">The sender wants to share the following files:</p>
+                                        <div id="modal-files-list">
+                                            <!-- Files will be listed here -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer border-top-0">
+                                        @* --- Removed onclick, will use JS listener --- *@
+                                        <button type="button" id="modal-reject-btn" class="btn btn-outline-dark" data-bs-dismiss="modal">
+                                            Reject
+                                        </button>
+                                        <button type="button" id="modal-accept-btn" class="btn btn-dark">
+                                            Accept & Download
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
 </section>
 
 <partial name="_HowItWorks" />
 <partial name="_Features" />
 
 @section Scripts {
-	<!-- QRCode JS Library -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-	<!-- SignalR Client -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
-	<!-- User Type JS -->
-	@if (ViewBag.sessionId == null)
-	{
-		<!-- Sender JS -->
-		<script src="~/js/sender.js"></script>
-	}
-	else
-	{
-		<!-- Receiver JS -->
-		<script src="~/js/receiver.js"></script>
-	})
+    <!-- QRCode JS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <!-- SignalR Client -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+    <!-- Shared Utility JS (for showAlert) -->
+    <script src="~/js/utils.js"></script>
+    <!-- User Type JS -->
+    @if (isSender) // Use the boolean flag here
+    {
+        <!-- Sender JS -->
+        <script src="~/js/sender.js"></script>
+    }
+    else
+    {
+        <!-- Receiver JS -->
+        <script src="~/js/receiver.js"></script>
+    }
 }

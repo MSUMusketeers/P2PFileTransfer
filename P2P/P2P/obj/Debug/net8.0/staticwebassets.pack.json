@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
+      "PackagePath": "staticwebassets\\js\\utils.js"
+    },
+    {
       "Id": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
       "PackagePath": "staticwebassets\\js\\xgxdxmsx.zkq~"
     },
