@@ -1,29 +1,28 @@
-# Base image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-WORKDIR /app
-EXPOSE 8080
-
-# Build image
+# Use the official .NET SDK image to build the app
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy all files from the current folder (which contains P2P.csproj)
+# Copy everything to the container
 COPY . .
 
-# Use relative path since P2P.csproj is in current dir
-RUN dotnet restore "./P2P.csproj"
-RUN dotnet build "./P2P.csproj" -c Release -o /app/build
+# Restore dependencies
+RUN dotnet restore "P2P/P2P/P2P.csproj"
 
-# Publish image
-FROM build AS publish
-RUN dotnet publish "./P2P.csproj" -c Release -o /app/publish
+# Build the project
+RUN dotnet build "P2P/P2P/P2P.csproj" -c Release -o /app/build
 
-# Final image
-FROM base AS final
+# Publish the app
+RUN dotnet publish "P2P/P2P/P2P.csproj" -c Release -o /app/publish
+
+# Use the runtime image for final image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
-COPY --from=publish /app/publish .
 
-# Optional: copy DB if needed
-# COPY database.db ./database.db
+# Copy the published output
+COPY --from=build /app/publish .
 
+# Expose port (optional, if your app runs on e.g. 5000)
+EXPOSE 5000
+
+# Run the app
 ENTRYPOINT ["dotnet", "P2P.dll"]
