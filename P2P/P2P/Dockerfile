@@ -21,8 +21,14 @@ WORKDIR /app
 # Copy the published output
 COPY --from=build /app/publish .
 
-# Expose port (optional, if your app runs on e.g. 5000)
-EXPOSE 5000
+# Copy database.db into the container (ensure it has the correct tables)
+COPY database.db ./database.db
 
-# Run the app
+# Expose the correct port (adjust this if your app runs on a different port)
+EXPOSE 8080
+
+# Final image
+FROM runtime AS final
+WORKDIR /app
+COPY --from=runtime /app/publish .
 ENTRYPOINT ["dotnet", "P2P.dll"]
