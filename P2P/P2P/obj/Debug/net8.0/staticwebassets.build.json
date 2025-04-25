@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dJpGou3wOj0R+eJ1JQF4Gal92RcuLkqpmsHp8pi9FwE=",
+  "Hash": "IknmhUKZti7fVXL793KRIYn0EUyu8lts4METRDleOY8=",
   "Source": "P2P",
   "BasePath": "_content/P2P",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "P2P\\wwwroot",
       "Source": "P2P",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css",
       "SourceId": "P2P",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/P2P",
       "RelativePath": "P2P#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "ZhZgj8HdmsPdKeHXXZpA315ViYeTlHoy4imJ0MFToBs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css"
+      "OriginalItemSpec": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css",
       "SourceId": "P2P",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/P2P",
       "RelativePath": "P2P#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "ZhZgj8HdmsPdKeHXXZpA315ViYeTlHoy4imJ0MFToBs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css"
+      "OriginalItemSpec": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\css\\site.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\css\\site.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\favicon.ico",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\favicon.ico",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\bdcjjnqs.0bg~",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\bdcjjnqs.0bg~",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/bdcjjnqs#[.{fingerprint}]?.0bg~",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bdcjjnqs.0bg~"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\lucide.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\lucide.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/lucide.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\js\\lucide.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\receiver.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\receiver.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/receiver#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -157,17 +157,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k78x82xin2",
-      "Integrity": "0IfK0qgaiRUjtGox0loXY2t9qomKo6lDDaPGAE5X2J0=",
+      "Fingerprint": "vba7kd4bjm",
+      "Integrity": "9eeb4t/dX+raGrLjQ6F3/HnK0z9tDUvrgA53xkhbdMk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\receiver.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\sender.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\sender.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/sender#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -178,17 +178,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6i71jjmz7g",
-      "Integrity": "wuTo/CkHoyitYQhA4hhMF/f5shR/8snGXuhOfYMyFUI=",
+      "Fingerprint": "yyf1533cxf",
+      "Integrity": "GkhmWOd0Qbl8Iem0ZgAnDoN7W8f65z+RQKjIUHdTTj8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\sender.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\site.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\site.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/utils#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\js\\utils.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "js/xgxdxmsx#[.{fingerprint}]?.zkq~",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\js\\xgxdxmsx.zkq~"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -794,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -836,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -878,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -920,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -962,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -983,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1004,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1025,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1046,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1067,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1109,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1130,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1151,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1172,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1193,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1235,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1256,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1277,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1298,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1319,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1340,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1361,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1382,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1403,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/bootstrap/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1424,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1466,10 +1466,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1487,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1508,10 +1508,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1529,10 +1529,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1550,10 +1550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/jquery.slim#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1571,10 +1571,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/jquery.slim.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1592,10 +1592,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/jquery.slim.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\jquery.slim.min.map"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1634,10 +1634,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1655,10 +1655,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1676,10 +1676,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1697,10 +1697,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1718,10 +1718,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1739,10 +1739,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1760,10 +1760,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1781,10 +1781,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/qrcodejs/qrcode#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1823,10 +1823,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\qrcodejs\\qrcode.js"
     },
     {
-      "Identity": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.min.js",
+      "Identity": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.min.js",
       "SourceId": "P2P",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
+      "ContentRoot": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\",
       "BasePath": "_content/P2P",
       "RelativePath": "lib/qrcodejs/qrcode.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1847,7 +1847,7 @@
   "Endpoints": [
     {
       "Route": "css/site.2sbzn9s99x.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\css\\site.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1868,7 +1868,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 19:21:15 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1892,7 +1892,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\css\\site.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1913,7 +1913,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 19:21:15 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1929,7 +1929,7 @@
     },
     {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\favicon.ico",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1950,7 +1950,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1974,7 +1974,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\favicon.ico",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1995,7 +1995,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2011,7 +2011,7 @@
     },
     {
       "Route": "js/bdcjjnqs.0bg~",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\bdcjjnqs.0bg~",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\bdcjjnqs.0bg~",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2032,7 +2032,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 17:14:31 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2048,7 +2048,7 @@
     },
     {
       "Route": "js/bdcjjnqs.ja3v8soc8o.0bg~",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\bdcjjnqs.0bg~",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\bdcjjnqs.0bg~",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2069,7 +2069,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 17:14:31 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2093,7 +2093,7 @@
     },
     {
       "Route": "js/lucide.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\lucide.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\lucide.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2114,7 +2114,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 18:36:19 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2130,7 +2130,7 @@
     },
     {
       "Route": "js/lucide.min.vh65csdsd0.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\lucide.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\lucide.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2151,7 +2151,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 01 Apr 2025 18:36:19 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2175,7 +2175,7 @@
     },
     {
       "Route": "js/receiver.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\receiver.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\receiver.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2184,7 +2184,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26234"
+          "Value": "31763"
         },
         {
           "Name": "Content-Type",
@@ -2192,11 +2192,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0IfK0qgaiRUjtGox0loXY2t9qomKo6lDDaPGAE5X2J0=\""
+          "Value": "\"9eeb4t/dX+raGrLjQ6F3/HnK0z9tDUvrgA53xkhbdMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 19:21:15 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2206,13 +2206,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0IfK0qgaiRUjtGox0loXY2t9qomKo6lDDaPGAE5X2J0="
+          "Value": "sha256-9eeb4t/dX+raGrLjQ6F3/HnK0z9tDUvrgA53xkhbdMk="
         }
       ]
     },
     {
-      "Route": "js/receiver.k78x82xin2.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\receiver.js",
+      "Route": "js/receiver.vba7kd4bjm.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\receiver.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2221,7 +2221,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "26234"
+          "Value": "31763"
         },
         {
           "Name": "Content-Type",
@@ -2229,11 +2229,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0IfK0qgaiRUjtGox0loXY2t9qomKo6lDDaPGAE5X2J0=\""
+          "Value": "\"9eeb4t/dX+raGrLjQ6F3/HnK0z9tDUvrgA53xkhbdMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 19:21:15 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2243,7 +2243,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k78x82xin2"
+          "Value": "vba7kd4bjm"
         },
         {
           "Name": "label",
@@ -2251,58 +2251,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0IfK0qgaiRUjtGox0loXY2t9qomKo6lDDaPGAE5X2J0="
-        }
-      ]
-    },
-    {
-      "Route": "js/sender.6i71jjmz7g.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\sender.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "32784"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wuTo/CkHoyitYQhA4hhMF/f5shR/8snGXuhOfYMyFUI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 19:21:16 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6i71jjmz7g"
-        },
-        {
-          "Name": "label",
-          "Value": "js/sender.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wuTo/CkHoyitYQhA4hhMF/f5shR/8snGXuhOfYMyFUI="
+          "Value": "sha256-9eeb4t/dX+raGrLjQ6F3/HnK0z9tDUvrgA53xkhbdMk="
         }
       ]
     },
     {
       "Route": "js/sender.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\sender.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\sender.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2311,7 +2266,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "32784"
+          "Value": "39513"
         },
         {
           "Name": "Content-Type",
@@ -2319,11 +2274,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wuTo/CkHoyitYQhA4hhMF/f5shR/8snGXuhOfYMyFUI=\""
+          "Value": "\"GkhmWOd0Qbl8Iem0ZgAnDoN7W8f65z+RQKjIUHdTTj8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 19:21:16 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2333,13 +2288,58 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wuTo/CkHoyitYQhA4hhMF/f5shR/8snGXuhOfYMyFUI="
+          "Value": "sha256-GkhmWOd0Qbl8Iem0ZgAnDoN7W8f65z+RQKjIUHdTTj8="
+        }
+      ]
+    },
+    {
+      "Route": "js/sender.yyf1533cxf.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\sender.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39513"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GkhmWOd0Qbl8Iem0ZgAnDoN7W8f65z+RQKjIUHdTTj8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yyf1533cxf"
+        },
+        {
+          "Name": "label",
+          "Value": "js/sender.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GkhmWOd0Qbl8Iem0ZgAnDoN7W8f65z+RQKjIUHdTTj8="
         }
       ]
     },
     {
       "Route": "js/site.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\site.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2360,7 +2360,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 08:22:52 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2376,7 +2376,7 @@
     },
     {
       "Route": "js/site.knfl8mglam.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\site.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2397,7 +2397,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 08:22:52 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2421,7 +2421,7 @@
     },
     {
       "Route": "js/utils.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2442,7 +2442,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 22:39:14 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2458,7 +2458,7 @@
     },
     {
       "Route": "js/utils.nbgu9h6uk3.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\utils.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2479,7 +2479,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 22:39:14 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2503,7 +2503,7 @@
     },
     {
       "Route": "js/xgxdxmsx.5xdbi00vkx.zkq~",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2524,7 +2524,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 16:25:40 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2548,7 +2548,7 @@
     },
     {
       "Route": "js/xgxdxmsx.zkq~",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\js\\xgxdxmsx.zkq~",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2569,7 +2569,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 16:25:40 GMT"
+          "Value": "Fri, 25 Apr 2025 12:55:40 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2585,7 +2585,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2606,7 +2606,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2622,7 +2622,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2643,7 +2643,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2667,7 +2667,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2688,7 +2688,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2704,7 +2704,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2725,7 +2725,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2749,7 +2749,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2770,7 +2770,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2786,7 +2786,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2807,7 +2807,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2831,7 +2831,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2852,7 +2852,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2868,7 +2868,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2889,7 +2889,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2913,7 +2913,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2934,7 +2934,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2950,7 +2950,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2971,7 +2971,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2995,7 +2995,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3016,7 +3016,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3032,7 +3032,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3053,7 +3053,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3077,7 +3077,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3098,7 +3098,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3122,7 +3122,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3143,7 +3143,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3159,7 +3159,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3180,7 +3180,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3204,7 +3204,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3225,7 +3225,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3241,7 +3241,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3262,7 +3262,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3278,7 +3278,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3299,7 +3299,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3315,7 +3315,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3336,7 +3336,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3360,7 +3360,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3381,7 +3381,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3405,7 +3405,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3426,7 +3426,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3442,7 +3442,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3463,7 +3463,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3487,7 +3487,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3508,7 +3508,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3524,7 +3524,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.nakmwdwsxp.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3545,7 +3545,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3569,7 +3569,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3590,7 +3590,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3606,7 +3606,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3627,7 +3627,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3651,7 +3651,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3672,7 +3672,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3688,7 +3688,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.e6q6xbwqzk.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3709,7 +3709,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3733,7 +3733,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3754,7 +3754,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3770,7 +3770,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3791,7 +3791,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3807,7 +3807,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3828,7 +3828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3852,7 +3852,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3873,7 +3873,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3897,7 +3897,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3918,7 +3918,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3934,7 +3934,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3955,7 +3955,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3979,7 +3979,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4000,7 +4000,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4016,7 +4016,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4037,7 +4037,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4053,7 +4053,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4074,7 +4074,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4090,7 +4090,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4111,7 +4111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4135,7 +4135,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4156,7 +4156,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4180,7 +4180,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.mk8rdyw69w.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4201,7 +4201,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4225,7 +4225,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.97yrjpyf9r.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4246,7 +4246,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4270,7 +4270,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4291,7 +4291,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4307,7 +4307,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4328,7 +4328,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4352,7 +4352,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4373,7 +4373,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4389,7 +4389,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4410,7 +4410,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4426,7 +4426,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4447,7 +4447,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4463,7 +4463,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4484,7 +4484,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4508,7 +4508,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4529,7 +4529,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4553,7 +4553,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4574,7 +4574,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4590,7 +4590,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4611,7 +4611,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4635,7 +4635,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4656,7 +4656,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4672,7 +4672,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4693,7 +4693,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4717,7 +4717,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4738,7 +4738,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4754,7 +4754,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4775,7 +4775,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4791,7 +4791,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4812,7 +4812,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4836,7 +4836,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4857,7 +4857,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4873,7 +4873,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4894,7 +4894,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4918,7 +4918,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4939,7 +4939,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4955,7 +4955,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4976,7 +4976,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4992,7 +4992,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5013,7 +5013,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5037,7 +5037,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5058,7 +5058,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5074,7 +5074,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5095,7 +5095,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5119,7 +5119,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.ophe14yye5.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5140,7 +5140,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5164,7 +5164,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.z9shlbduue.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5185,7 +5185,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5209,7 +5209,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.1piudyfv7h.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5230,7 +5230,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5254,7 +5254,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.f6zq8v6eb3.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5275,7 +5275,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5299,7 +5299,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5320,7 +5320,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5336,7 +5336,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5357,7 +5357,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5381,7 +5381,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5402,7 +5402,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5418,7 +5418,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5439,7 +5439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5463,7 +5463,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5484,7 +5484,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5500,7 +5500,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5521,7 +5521,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5545,7 +5545,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5566,7 +5566,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5582,7 +5582,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5603,7 +5603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5619,7 +5619,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5640,7 +5640,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5664,7 +5664,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5685,7 +5685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5701,7 +5701,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5722,7 +5722,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5746,7 +5746,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5767,7 +5767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5783,7 +5783,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5804,7 +5804,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5820,7 +5820,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5841,7 +5841,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5865,7 +5865,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.n5w6o92d9r.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5886,7 +5886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5910,7 +5910,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5931,7 +5931,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5947,7 +5947,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5968,7 +5968,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5992,7 +5992,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6013,7 +6013,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6029,7 +6029,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6050,7 +6050,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6074,7 +6074,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6095,7 +6095,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6111,7 +6111,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6132,7 +6132,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6148,7 +6148,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6169,7 +6169,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6193,7 +6193,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.3z7e6jcchw.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6214,7 +6214,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6238,7 +6238,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6259,7 +6259,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6275,7 +6275,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6296,7 +6296,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6312,7 +6312,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.js.qm38hbak0o.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6333,7 +6333,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6357,7 +6357,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.min.cgnkm5grl2.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6378,7 +6378,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6402,7 +6402,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6423,7 +6423,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6439,7 +6439,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.min.js.llx8tuhx2q.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6460,7 +6460,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6484,7 +6484,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6505,7 +6505,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6521,7 +6521,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.bundle.vr29y6m4cb.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6542,7 +6542,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6566,7 +6566,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.9l606n85tv.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6587,7 +6587,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6611,7 +6611,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6632,7 +6632,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6648,7 +6648,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6669,7 +6669,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6685,7 +6685,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.js.o6r5icn62k.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6706,7 +6706,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6730,7 +6730,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.min.c0v9te1kh1.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6751,7 +6751,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6775,7 +6775,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6796,7 +6796,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6812,7 +6812,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.min.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6833,7 +6833,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6849,7 +6849,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.esm.min.js.o1d4puk7gs.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6870,7 +6870,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6894,7 +6894,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6915,7 +6915,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6931,7 +6931,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6952,7 +6952,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6968,7 +6968,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.js.s9kdte20bp.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6989,7 +6989,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7013,7 +7013,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7034,7 +7034,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7050,7 +7050,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.min.js.lxnhmosdkt.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7071,7 +7071,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7095,7 +7095,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.min.js.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7116,7 +7116,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7132,7 +7132,7 @@
     },
     {
       "Route": "lib/bootstrap/js/bootstrap.min.kta3t9duk9.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\bootstrap\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7153,7 +7153,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7177,7 +7177,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7198,7 +7198,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7222,7 +7222,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7243,7 +7243,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7259,7 +7259,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7280,7 +7280,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7304,7 +7304,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7325,7 +7325,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7349,7 +7349,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7370,7 +7370,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7386,7 +7386,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7407,7 +7407,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7423,7 +7423,7 @@
     },
     {
       "Route": "lib/jquery/jquery.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7444,7 +7444,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7460,7 +7460,7 @@
     },
     {
       "Route": "lib/jquery/jquery.min.b7456906j7.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7481,7 +7481,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7505,7 +7505,7 @@
     },
     {
       "Route": "lib/jquery/jquery.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7526,7 +7526,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7542,7 +7542,7 @@
     },
     {
       "Route": "lib/jquery/jquery.min.kaotp2rinp.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7563,7 +7563,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7587,7 +7587,7 @@
     },
     {
       "Route": "lib/jquery/jquery.min.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7608,7 +7608,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7624,7 +7624,7 @@
     },
     {
       "Route": "lib/jquery/jquery.slim.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7645,7 +7645,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7661,7 +7661,7 @@
     },
     {
       "Route": "lib/jquery/jquery.slim.min.2dvnhepgun.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7682,7 +7682,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7706,7 +7706,7 @@
     },
     {
       "Route": "lib/jquery/jquery.slim.min.bx9zxpoytq.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7727,7 +7727,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7751,7 +7751,7 @@
     },
     {
       "Route": "lib/jquery/jquery.slim.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7772,7 +7772,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7788,7 +7788,7 @@
     },
     {
       "Route": "lib/jquery/jquery.slim.min.map",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7809,7 +7809,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7825,7 +7825,7 @@
     },
     {
       "Route": "lib/jquery/jquery.slim.pggefjbfbr.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.slim.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7846,7 +7846,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7870,7 +7870,7 @@
     },
     {
       "Route": "lib/jquery/jquery.xwv4dvy4xf.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7891,7 +7891,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7915,7 +7915,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7936,7 +7936,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7960,7 +7960,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7981,7 +7981,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7997,7 +7997,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8018,7 +8018,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8042,7 +8042,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8063,7 +8063,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8079,7 +8079,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8100,7 +8100,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8124,7 +8124,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8145,7 +8145,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8161,7 +8161,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.6d0lkjaslc.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8182,7 +8182,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8206,7 +8206,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8227,7 +8227,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8243,7 +8243,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8264,7 +8264,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8280,7 +8280,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8301,7 +8301,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8325,7 +8325,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8346,7 +8346,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8362,7 +8362,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8383,7 +8383,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8407,7 +8407,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8428,7 +8428,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8452,7 +8452,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8473,7 +8473,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8489,7 +8489,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8510,7 +8510,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8534,7 +8534,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8555,7 +8555,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8571,7 +8571,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8592,7 +8592,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8616,7 +8616,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8637,7 +8637,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8653,7 +8653,7 @@
     },
     {
       "Route": "lib/qrcodejs/qrcode.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8674,7 +8674,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8690,7 +8690,7 @@
     },
     {
       "Route": "lib/qrcodejs/qrcode.min.h5gslb8p3n.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8711,7 +8711,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8735,7 +8735,7 @@
     },
     {
       "Route": "lib/qrcodejs/qrcode.min.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.min.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8756,7 +8756,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8772,7 +8772,7 @@
     },
     {
       "Route": "lib/qrcodejs/qrcode.ph5t74p71l.js",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.js",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\wwwroot\\lib\\qrcodejs\\qrcode.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8793,7 +8793,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 08:39:27 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8817,7 +8817,7 @@
     },
     {
       "Route": "P2P.agtmb4zoqj.bundle.scp.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8838,7 +8838,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 22:48:35 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8862,7 +8862,7 @@
     },
     {
       "Route": "P2P.agtmb4zoqj.styles.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8883,7 +8883,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 22:48:35 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8907,7 +8907,7 @@
     },
     {
       "Route": "P2P.bundle.scp.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\P2P.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8928,7 +8928,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 22:48:35 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8944,7 +8944,7 @@
     },
     {
       "Route": "P2P.styles.css",
-      "AssetFile": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css",
+      "AssetFile": "D:\\source\\P2PFileTransfer\\P2P\\P2P\\obj\\Debug\\net8.0\\scopedcss\\bundle\\P2P.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8965,7 +8965,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 31 Mar 2025 22:48:35 GMT"
+          "Value": "Fri, 25 Apr 2025 12:54:20 GMT"
         },
         {
           "Name": "Cache-Control",
