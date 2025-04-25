@@ -7,8 +7,8 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet restore /src/P2P.csproj
-RUN dotnet build /src/P2P.csproj -c Release -o /app/build
+RUN dotnet restore "P2P.csproj"
+RUN dotnet build "P2P.csproj" -c Release -o /app/build
 
 # Publish image
 FROM build AS publish
