@@ -22,7 +22,7 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 # Copy database.db into the container (ensure it has the correct tables)
-COPY database.db ./database.db
+COPY database.db ./
 
 # Expose the correct port (adjust this if your app runs on a different port)
 EXPOSE 8080
