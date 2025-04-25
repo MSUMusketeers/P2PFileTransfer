@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {}
+    "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {}
   },
   "projects": {
-    "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {
+    "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
+        "projectUniqueName": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
         "projectName": "P2P",
-        "projectPath": "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
-        "packagesPath": "C:\\Users\\YASH SOLANKI\\.nuget\\packages\\",
-        "outputPath": "D:\\.Net Project\\P2PFileTransfer\\P2P\\P2P\\obj\\",
+        "projectPath": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\P2P.csproj",
+        "packagesPath": "C:\\Users\\Maiitra\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\P2P (asp.net core)\\P2PFileTransfer\\P2P\\P2P\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\YASH SOLANKI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Maiitra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -89,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

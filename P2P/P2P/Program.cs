@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using P2P.Context;
 using Microsoft.EntityFrameworkCore;
+using P2P.Hubs;
 namespace P2P.Models
 {
     public class Program
@@ -15,6 +16,7 @@ namespace P2P.Models
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("localDb")));
+            builder.Services.AddSignalR();
 
             var app = builder.Build();
 
@@ -36,6 +38,7 @@ namespace P2P.Models
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Account}/{action=Login}/{id?}");
+            app.MapHub<FileTransferHub>("/filetransferhub");
 
             app.Run();
         }

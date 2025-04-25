@@ -17,28 +17,24 @@ namespace P2P.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string? sessionId = null)
         {
-            return View(new FileViewModel());
+            ViewBag.SessionId = sessionId;
+            return View();
         }
 
+        // This POST action is effectively replaced by the client-side JavaScript
+        // handling the form submission and starting the SignalR/WebRTC process.
+        /*
         [HttpPost]
         public IActionResult StartSharing(FileViewModel model)
         {
-            // In a real implementation, this would handle the WebRTC connection setup
-            // For demo purposes, we're just generating a random code
-            model.IsSharing = true;
-            model.ShareCode = "FLOW" + Guid.NewGuid().ToString().Substring(0, 6).ToUpper();
-            model.Progress = 0;
+            can be used to store files in db
 
-            return View("Index", model);
+            return Accepted();
         }
+        */
 
-        [HttpPost]
-        public IActionResult ResetSharing()
-        {
-            return RedirectToAction("Index");
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

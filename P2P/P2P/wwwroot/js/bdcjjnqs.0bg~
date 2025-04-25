@@ -1,0 +1,335 @@
+﻿
+const uploadSection = document.querySelector('form[action="/Home/StartSharing"]');
+const sharingSection = document.querySelector('.text-center:has(.bg-warning-soft)');
+
+// Initially hide sharing section
+sharingSection.style.display = 'none';
+
+// Handle form submission (may be used to send Model using fetch API)
+uploadSection.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    try {
+        // NOTE: This fetch call is now replaced by our SignalR/WebRTC backend logic below.
+        // If you wish to support both approaches, you could decide based on file type/size.
+        // const response = await fetch('/Home/StartSharing', {
+        //     method: 'POST',
+        //     body: formData
+        // });
+        // if (!response.ok) throw new Error('Network response was not ok');
+        // const result = await response.json();
+        // uploadSection.style.display = 'none';
+        // sharingSection.style.display = 'block';
+        // const shareCodeElement = sharingSection.querySelector('.gradient-text');
+        // shareCodeElement.textContent = result.shareCode;
+        // new QRCode(document.getElementById("qrcode"), {text: result.shareCode, width: 200, height: 200, colorDark: "#000000", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.H });
+        // startProgressMonitoring(result.shareCode);
+
+        // Instead, use our backend integration (see below)
+        const fileInput = document.getElementById('file-upload');
+        if (fileInput.files.length > 0) {
+            // The selected file will be handled by our new backend integration code
+            // (SignalR & WebRTC-based file transfer)
+        } else {
+            alert("Please select a file to share.");
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to start sharing. Please try again.');
+    }
+});
+
+// File handling functions for drag & drop and displaying files remain unchanged
+function handleFileSelect(event) {
+    const files = event.target.files;
+    if (files.length > 0) {
+        displayFiles(files);
+    }
+}
+
+function displayFiles(files) {
+    const container = document.getElementById('selected-files');
+    container.innerHTML = '';
+
+    Array.from(files).forEach((file, index) => {
+        const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+
+        const fileElement = document.createElement('div');
+        fileElement.className = 'border rounded p-3 d-flex align-items-center justify-content-between mb-2';
+        fileElement.innerHTML = `
+                    <div class="d-flex align-items-center gap-2">
+                        <i data-lucide="file" class="opacity-75" style="width: 20px; height: 20px;"></i>
+                        <span class="small">${file.name}</span>
+                        <span class="text-muted smaller">(${fileSize} MB)</span>
+                    </div>
+                    <button type="button" class="btn btn-link p-0 text-muted" onclick="removeFile(this, ${index})">
+                        <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+                    </button>
+                    `;
+
+        container.appendChild(fileElement);
+        lucide.createIcons({ parent: fileElement });
+    });
+
+    document.getElementById('selected-files-container').classList.remove('d-none');
+}
+
+function removeFile(button, index) {
+    const fileInput = document.getElementById('file-upload');
+    const container = document.getElementById('selected-files');
+
+    button.closest('.border').remove();
+
+    if (container.children.length === 0) {
+        document.getElementById('selected-files-container').classList.add('d-none');
+    }
+}
+
+// Drag and drop handling
+const dropZone = document.getElementById('dropZone');
+
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('border-warning');
+});
+
+dropZone.addEventListener('dragleave', () => {
+    dropZone.classList.remove('border-warning');
+});
+
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('border-warning');
+
+    if (e.dataTransfer.files.length > 0) {
+        document.getElementById('file-upload').files = e.dataTransfer.files;
+        displayFiles(e.dataTransfer.files);
+    }
+});
+
+
+
+//========================================
+
+
+
+// Initialize SignalR connection
+const connection = new signalR.HubConnectionBuilder()
+    .withUrl("/fileTransferHub")
+    .configureLogging(signalR.LogLevel.Information)
+    .build();
+
+let peerConnection, dataChannel, myConnectionId, sessionId;
+let senderFile = null;
+let senderFileSize = 0;
+let sentSize = 0;
+const chunkSize = 16384; // 16KB chunk size for file data
+let fileReader = new FileReader();
+
+// =================================================
+// Sender Setup for SignalR and WebRTC File Transfer
+// =================================================
+
+// Utility: Update progress bar and percentage text
+function updateProgress(current, total) {
+    const progressBar = document.getElementById('progress-bar');
+    const progressPercentage = document.getElementById('progress-percentage');
+    if (total > 0) {
+        const progress = (current / total) * 100;
+        console.log('current:', current, ' total:', total, ' progress:', progress);
+        progressBar.style.width = `${progress}%`;
+        progressPercentage.textContent = `${Math.round(progress)}%`;
+    }
+}
+
+// Generate a random session ID (used as the share code)
+function generateSessionId() {
+    return 'xxxx-xxxx'.replace(/[x]/g, () => (Math.random() * 16 | 0).toString(16));
+}
+
+// Setup Share Link on Sender UI
+function setupLink() {
+    // Generate sessionId to make a Group on SignalR and get share link
+    sessionId = generateSessionId();
+    // Update the UI share link
+    const shareCodeElement = document.getElementById('share-link');
+    shareCodeElement.textContent = `${window.location.href}?sessionId=${sessionId}`;
+    console.log(`${window.location.href}?sessionId=${sessionId}`);
+
+    // Show QR code for convenience
+    new QRCode(document.getElementById("qrcode"), {
+        text: `${window.location.href}?sessionId=${sessionId}`,
+        width: 200,
+        height: 200,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+}
+
+// Setup the sender's WebRTC connection and data channel
+function setupSender() {
+    if (peerConnection) return; // Prevent re-setup
+
+    peerConnection = new RTCPeerConnection({
+        iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+    });
+
+    // Create data channel for file transfer
+    dataChannel = peerConnection.createDataChannel("fileTransfer");
+    console.log("dataChannel Created")
+    dataChannel.onopen = () => {
+        console.log("Data channel opened, starting file transfer.");
+        sendFile();
+    };
+    dataChannel.onclose = () => console.log("Data channel closed.");
+
+    // ICE candidate gathering
+    peerConnection.onicecandidate = (event) => {
+        if (event.candidate) {
+            console.log('New ICE candidate found' + event.candidate);
+            connection.invoke("SendSignal", sessionId, myConnectionId, JSON.stringify({ice: event.candidate}));
+        }
+    };
+
+    // Create and send the offer for WebRTC negotiation
+    peerConnection.createOffer()
+        .then(offer => peerConnection.setLocalDescription(offer))
+        .then(() => {
+            console.log("Offer created, setLocalDescription and sending to Peer");
+            connection.invoke("SendSignal", sessionId, myConnectionId, JSON.stringify({sdp:peerConnection.localDescription}));
+        })
+        .catch(err => console.error("Error creating offer:", err));
+}
+
+// Read and send the file in chunks over the data channel
+function sendFile() {
+    // First, send file metadata so the receiver knows the file details
+    const metadata = JSON.stringify({
+        name: senderFile.name,
+        size: senderFile.size,
+        type: senderFile.type
+    });
+    dataChannel.send(metadata);
+
+    // Now start reading and sending file chunks
+    let offset = 0;
+    fileReader.onload = (event) => {
+        dataChannel.send(event.target.result);
+        offset += event.target.result.byteLength;
+        sentSize = offset;
+        updateProgress(sentSize, senderFile.size);
+
+        const currentTime = Date.now();
+        const elapsedTime = (currentTime - startTime) / 1000; // in seconds
+        const speed = (sentSize / (1024 * 1024)) / elapsedTime; // MB/s
+        console.log(`Transfer speed: ${speed.toFixed(2)} MB/s`);
+        //updateTransferStats(speed.toFixed(2));
+
+        setTimeout(() => {
+        if (offset < senderFile.size) {
+            readSlice(offset);
+        } else {
+            console.log("File transfer completed.");
+            dataChannel.close();
+            }
+        }, 1000);
+    };
+
+    const readSlice = (o) => {
+        const slice = senderFile.slice(o, o + chunkSize);
+        fileReader.readAsArrayBuffer(slice);
+    };
+
+    const startTime = Date.now();
+    readSlice(0);
+}
+
+// UNDONE: Add this new function
+//function updateTransferStats(speed) {
+//    const statsElement = document.getElementById('transfer-stats');
+//    if (statsElement) {
+//        statsElement.textContent = `Transfer speed: ${speed} MB/s`;
+//    }
+//}
+
+// ==========================
+// Common Signalling Function
+// ==========================
+
+// Handle incoming signals for negotiation (offer/answer/ICE)
+function handleSignal(signal, senderId) {
+    if (senderId === myConnectionId) return; // Ignore self-sent signals
+    const data = JSON.parse(signal);
+    if (data.sdp) {
+        peerConnection.setRemoteDescription(new RTCSessionDescription(data.sdp))
+            .then(() => {
+                console.log(data.sdp.type + "Received and set RemoteDescription()");
+                if (data.sdp.type === "offer") {
+                    peerConnection.createAnswer()
+                        .then(answer => peerConnection.setLocalDescription(answer))
+                        .then(() => {
+                            connection.invoke("SendSignal", sessionId, myConnectionId, JSON.stringify({sdp:peerConnection.localDescription}));
+                        });
+                }
+            })
+            .catch(err => console.error("Error setting remote description:", err));
+    } else if (data.ice) {
+        console.log("Received Peer-sent ICE candidate. Adding to pool.")
+        peerConnection.addIceCandidate(new RTCIceCandidate(data.ice))
+            .catch(err => console.error("Error adding ICE candidate:", err));
+    }
+}
+
+// ========================
+// SignalR Connection Start
+// ========================
+function startConnection() {
+    connection.start()
+        .then(() => {
+            myConnectionId = connection.connectionId;
+            console.log("SignalR connected. My Connection ID:", myConnectionId);
+            // Using sessionId to make new Group on SignalR Hub
+            connection.invoke("JoinSession", sessionId)
+                .then(() => console.log("Sender joined session:", sessionId))
+                .catch(err => console.error("Error joining session:", err));
+            console.log("Waiting for Peer to Join, which would setupSender()")
+            // On PeerJoined setupSender()
+            connection.on("PeerJoined", (peerId) => {
+                if (peerId !== myConnectionId) {
+                    console.log(`Recipient ${peerId} joined session ${sessionId}. Starting WebRTC setup.`);
+                    setupSender();
+                }
+            })
+        })
+        .catch(err => console.error("SignalR connection error:", err));
+}
+// Listen for incoming signals from the hub
+connection.on("ReceiveSignal", (signal, senderId) => {
+    handleSignal(signal, senderId);
+});
+
+// When the user clicks "Start Sharing", setupLink() and startConnection()
+uploadSection.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fileInput = document.getElementById('file-upload');
+    if (fileInput.files.length > 0) {
+        // Assign the selected file to be sent
+        senderFile = fileInput.files[0];
+        senderFileSize = senderFile.size;
+        // Hide the upload section and show the sharing UI
+        uploadSection.style.display = 'none';
+        sharingSection.style.display = 'block';
+
+        setupLink();
+        startConnection();
+    } else {
+        alert("Please select a file to share.");
+    }
+});
+
+// Cancel transfer and reload the page
+function resetSharing() {
+    window.location.reload();
+}
