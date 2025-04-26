@@ -21,8 +21,11 @@ namespace P2P.Controllers
         [HttpPost]
         public IActionResult Login(string Email, string Password)
         {
-            if(_context.Users.Any(u => u.Email == Email && u.Password == Password))
+            var user = _context.Users.FirstOrDefault(u => u.Email == Email && u.Password == Password);
+            if (user != null)
             {
+                int user_id = user.Id;
+                HttpContext.Session.SetInt32("user_id", user_id);
                 return RedirectToAction("Index", "Home");
             }
             ViewBag.Message = "Invalid email or password";

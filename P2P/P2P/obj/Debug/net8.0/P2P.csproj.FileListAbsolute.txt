@@ -27,7 +27,6 @@ D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets\msbuild
 D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.P2P.props
 D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.P2P.props
 D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.pack.json
-D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.dll
 D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\refint\P2P.dll
 D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.pdb
@@ -912,3 +911,4 @@ D:\Projects\P2P (asp.net core)\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\refint\P
 D:\Projects\P2P (asp.net core)\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.pdb
 D:\Projects\P2P (asp.net core)\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.genruntimeconfig.cache
 D:\Projects\P2P (asp.net core)\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\ref\P2P.dll
+D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
