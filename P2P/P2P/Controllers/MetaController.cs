@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using P2P.Context;
 using P2P.Models;
+using System.Text.Json;
 namespace P2P.Controllers
 {
     public class MetaController : Controller
@@ -36,8 +37,14 @@ namespace P2P.Controllers
                 UserId = user_id, // Replace with actual user ID
                 Time = TimeOnly.FromDateTime(DateTime.Now),
                 Date = DateOnly.FromDateTime(DateTime.Now),
-                FileTransfered = fileTransfered
+                FileTransfered = JsonSerializer.Serialize(fileTransfered) 
             };
+
+            Console.WriteLine("File Transfered: " + transferHistory.FileTransfered);
+
+            Console.WriteLine("Deserialize :" + JsonSerializer.Deserialize<List<List<string>>>(transferHistory.FileTransfered));
+
+
             _context.TransferHistories.Add(transferHistory);
             await _context.SaveChangesAsync();
 

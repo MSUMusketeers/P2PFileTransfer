@@ -1,7 +1,7 @@
-﻿@page
-@{
-    ViewData["Title"] = "Transferred Files History";
+﻿@{
+   ViewData["title"] = "Transfer File History";
 }
+@model List<P2P.Models.TransferHistory>
 
 <h2>Transferred Files History</h2>
 
@@ -9,6 +9,31 @@
 <link href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css" rel="stylesheet" />
 
+<h2>Transfer History</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Date</th>
+            <th>File Transferred</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.UserId</td>
+                <td>@item.Date</td>
+                <td>@item.FileTransfered</td>
+                <td>@item.Time</td>
+            </tr>
+        }
+    </tbody>
+</table>
 <!-- Grid Container -->
 <div id="transferHistoryGrid" class="ag-theme-alpine" style="height: 600px; width: 100%; margin-top: 20px;"></div>
 
@@ -16,6 +41,8 @@
 <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
 
 <script>
+    
+
     document.addEventListener('DOMContentLoaded', function () {
         const columnDefs = [
             { headerName: "File Name", field: "fileName", sortable: true, filter: true },

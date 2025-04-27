@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 namespace P2P.Models
 {
@@ -17,7 +18,8 @@ namespace P2P.Models
 
         public DateOnly Date { get; set; }
 
-        public List<List<string>> FileTransfered = new List<List<string>>();
+        public string? FileTransfered { get; set; }
+ 
 
     }
 }
