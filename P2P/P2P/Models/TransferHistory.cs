@@ -15,6 +15,8 @@ namespace P2P.Models
 
         public TimeOnly Time { get; set; }
 
+        public DateOnly Date { get; set; }
+
         public List<List<string>> FileTransfered = new List<List<string>>();
 
     }

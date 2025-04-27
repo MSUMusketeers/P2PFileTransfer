@@ -1,0 +1,49 @@
+﻿@page
+@{
+    ViewData["Title"] = "Transferred Files History";
+}
+
+<h2>Transferred Files History</h2>
+
+<!-- AG Grid Styles -->
+<link href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css" rel="stylesheet" />
+
+<!-- Grid Container -->
+<div id="transferHistoryGrid" class="ag-theme-alpine" style="height: 600px; width: 100%; margin-top: 20px;"></div>
+
+<!-- AG Grid Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const columnDefs = [
+            { headerName: "File Name", field: "fileName", sortable: true, filter: true },
+            { headerName: "Size (KB)", field: "fileSize", sortable: true, filter: true },
+            { headerName: "Transfer Date", field: "date", sortable: true, filter: 'agDateColumnFilter' },
+            { headerName: "Transfer Time", field: "time", sortable: true, filter: true },
+            { headerName: "User", field: "username", sortable: true, filter: true }
+        ];
+
+        const gridOptions = {
+            columnDefs: columnDefs,
+            rowData: null, // Will set this later
+            pagination: true,
+            paginationPageSize: 10,
+            animateRows: true
+        };
+
+        const eGridDiv = document.querySelector('#transferHistoryGrid');
+        new agGrid.Grid(eGridDiv, gridOptions);
+
+        // Fetch data from server-side Razor handler
+        fetch('/Home/GetTransferedFiles') // your backend URL must match
+            .then(response => response.json())
+            .then(data => {
+                gridOptions.api.setRowData(data);
+            })
+            .catch(error => {
+                console.error('Error loading transfer history:', error);
+            });
+    });
+</script>

@@ -35,6 +35,7 @@ namespace P2P.Controllers
             {
                 UserId = user_id, // Replace with actual user ID
                 Time = TimeOnly.FromDateTime(DateTime.Now),
+                Date = DateOnly.FromDateTime(DateTime.Now),
                 FileTransfered = fileTransfered
             };
             _context.TransferHistories.Add(transferHistory);
