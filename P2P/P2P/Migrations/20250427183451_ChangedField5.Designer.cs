@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using P2P.Context;
 
@@ -10,9 +11,11 @@ using P2P.Context;
 namespace P2P.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250427183451_ChangedField5")]
+    partial class ChangedField5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.3");
@@ -26,8 +29,11 @@ namespace P2P.Migrations
                     b.Property<DateOnly>("Date")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("FileTransfered")
+                    b.Property<string>("FileName")
                         .HasColumnType("TEXT");
+
+                    b.Property<long?>("FileSize")
+                        .HasColumnType("INTEGER");
 
                     b.Property<TimeOnly>("Time")
                         .HasColumnType("TEXT");

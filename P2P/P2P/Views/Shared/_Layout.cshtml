@@ -22,13 +22,18 @@
             <a class="d-flex align-items-center gap-2 text-decoration-none" href="/Home/Index">
                 <span class="fs-4 fw-bold gradient-text">FileFlow</span>
             </a>
-            <nav class="ms-auto d-flex gap-4">
+            <nav class="ms-auto d-flex gap-4" id="navbar">
                 <a href="#how-it-works" class="text-decoration-none small fw-medium text-muted hover-text-dark">
                     How It Works
                 </a>
                 <a href="#features" class="text-decoration-none small fw-medium text-muted hover-text-dark">
                     Features
                 </a>
+
+                <a asp-controller="DisplayTransferedFiles" asp-action="Index" class="text-decoration-none small fw-medium text-muted hover-text-dark">
+                    History
+                </a>
+
             </nav>
         </div>
     </header>
@@ -60,6 +65,8 @@
     <!-- Lucide Icons -->
     @* <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>  *@
     <script src="~/js/lucide.min.js" onload="lucide.createIcons()"></script>
+
+   
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

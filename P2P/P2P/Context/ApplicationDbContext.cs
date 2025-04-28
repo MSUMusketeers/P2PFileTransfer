@@ -8,5 +8,7 @@ namespace P2P.Context
         {
         }
         public DbSet<User> Users { get; set; } = null!;
+
+        public DbSet<TransferHistory> TransferHistories { get; set; } = null!;
     }
 }

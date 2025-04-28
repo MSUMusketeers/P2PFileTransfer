@@ -93,6 +93,9 @@
 
 <!-- Password Visibility Toggle -->
 <script>
+    const navbar = document.getElementById("navbar");
+    navbar.style.visibility = "hidden";
+
     function togglePassword() {
         var passwordField = document.getElementById("password");
         var icon = document.getElementById("toggle-icon");
@@ -110,6 +113,8 @@
 
     // Optional: Add hover effect to login card
     document.addEventListener("DOMContentLoaded", function() {
+
+        
         const loginCard = document.querySelector(".card");
 
         loginCard.addEventListener("mouseenter", function() {

@@ -1,0 +1,143 @@
+﻿@using System.Text.Json
+@using System.Text.Json.Serialization
+@{
+    ViewData["Title"] = "File History";
+
+    var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                Converters =
+        {
+            new JsonStringEnumConverter(),
+            new JsonDateOnlyConverter(),
+            new JsonTimeOnlyConverter()
+        }
+            };
+}
+@model List<P2P.Models.TransferHistory>
+
+<h2>Recieved Files History</h2>
+
+<br />
+
+<!-- Search Box -->
+<div class="input-group mb-3" style="max-width: 300px; margin-bottom: 20px; margin-left:8px">
+    <input type="text"
+           class="form-control"
+           id="fileSearch"
+           placeholder="Search by File Name"
+           aria-label="Search by File Name" />
+</div>
+
+<!-- AG Grid Container -->
+<div id="transferHistoryGrid"
+     class="ag-theme-alpine"
+     style="height: 600px; width: 100%; margin-top: 20px;">
+</div>
+
+<!-- AG Grid Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // helper to format bytes → Byte/KB/MB/GB
+        function formatFileSize(sizeInBytes) {
+            if (sizeInBytes < 1024) return sizeInBytes + ' Bytes';
+            if (sizeInBytes < 1024 * 1024) return (sizeInBytes / 1024).toFixed(2) + ' KB';
+            if (sizeInBytes < 1024 * 1024 * 1024) return (sizeInBytes / (1024 * 1024)).toFixed(1) + ' MB';
+            return (sizeInBytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
+        }
+
+        
+        let gridApi;
+
+        const columnDefs = [
+            { headerName: "ID",       field: "id" },
+            { headerName: "User ID",  field: "userId" },
+            {
+                headerName: "Date",
+                field: "date",
+                filter: 'agDateColumnFilter'
+            },
+            {
+                headerName: "File Size",
+                field: "fileSize",
+                cellRenderer: function(params) {
+                    let fileData = [];
+                    try {
+                        fileData = JSON.parse(params.data.fileTransfered);
+                    } catch (e) {
+                        console.error("Error parsing fileTransfered data:", e);
+                    }
+                    if (Array.isArray(fileData) && fileData.length) {
+                        return fileData
+                            .map(item => {
+                                if (Array.isArray(item) && item.length === 2) {
+                                    return formatFileSize(parseInt(item[0], 10));
+                                }
+                                return "N/A";
+                            })
+                            .join("<br>");
+                    }
+                    return "N/A";
+                }
+            },
+            {
+                headerName: "File Name",
+                field: "fileName",
+                cellRenderer: function(params) {
+                    let fileData = [];
+                    try {
+                        fileData = JSON.parse(params.data.fileTransfered);
+                    } catch (e) {
+                        console.error("Error parsing fileTransfered data:", e);
+                    }
+                    if (Array.isArray(fileData) && fileData.length) {
+                        return fileData
+                            .map(item => {
+                                if (Array.isArray(item) && item.length === 2) {
+                                    return item[1];
+                                }
+                                return "N/A";
+                            })
+                            .join("<br>");
+                    }
+                    return "N/A";
+                }
+            },
+            { headerName: "Time", field: "time" }
+        ];
+
+        const gridOptions = {
+            columnDefs:   columnDefs,
+            rowData:      @(Model != null ? Html.Raw(JsonSerializer.Serialize(Model, options)) : "[]"),
+            pagination:   true,
+            paginationPageSize: 10,
+            animateRows:  true,
+            defaultColDef: {
+                flex:       1,
+                wrapText:   true,
+                autoHeight: true,
+                minWidth:   100,
+                sortable:   true,
+                filter:     true,
+                resizable:  true,
+                
+            },
+            onGridReady: params => {
+                gridApi = params.api;
+            }
+        };
+
+        // create the grid
+        const eGridDiv = document.querySelector('#transferHistoryGrid');
+        agGrid.createGrid(eGridDiv, gridOptions);
+
+        // wire up search box to quick filter
+        document.getElementById('fileSearch').addEventListener('input', function () {
+            if (gridApi) {
+                gridApi.setGridOption('quickFilterText', this.value);
+            }
+        });
+    });
+</script>
