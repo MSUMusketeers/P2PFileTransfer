@@ -3,9 +3,12 @@
     --bs-body-font-family: "Geist", Helvetica, Arial, sans-serif;
     --bs-primary: #ff8d13;
     --bs-primary-dark: #d97706;
-    --bs-success-rgb:#00d21b
+    --bs-success-rgb: #00d21b;
     --bs-warning-soft: rgba(255, 193, 23, 0.25);
-
+    --gradient-start: #ff8d13;
+    --gradient-end: #ffc117;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -42,9 +45,101 @@ body {
     border-style: dashed !important;
 }
 
-@@media (max-width: 768px) {
+/* Background for the features section */
+.bg-light {
+    background-color: #f8fafc;
+}
+
+/* Card styling for features section */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: var(--bs-body-font-family);
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--card-hover-shadow);
+    }
+
+/* Icon wrapper for features section */
+.icon-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bs-warning-soft);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature icon */
+.feature-icon {
+    width: 32px;
+    height: 32px;
+    color: #f5a623; /* Light orange to match the icon in the image */
+}
+
+/* Animation for feature cards */
+.feature-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+    .feature-card:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .feature-card:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .feature-card:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    .feature-card:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    .feature-card:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .feature-card:nth-child(6) {
+        animation-delay: 0.6s;
+    }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+}
+
+/* Responsive adjustments for features section */
+@media (max-width: 576px) {
+    .icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .feature-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .card-body {
+        padding: 1.5rem;
     }
 }
