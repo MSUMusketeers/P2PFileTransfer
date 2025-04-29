@@ -14,6 +14,8 @@
 - 📦 No file size limits
 - ❌ No tracking, cookies, or server-side file storage
 
+
+
 ## 🧭 Project Overview
 
 - **Built With:** Blazor Server (.NET 8)
