@@ -171,28 +171,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 myConnectionId = connection.connectionId;
                 console.log("SignalR connected:", myConnectionId);
                 const urlParams = new URLSearchParams(window.location.search);
-                sessionId = urlParams.get("sessionId");
-                if (!sessionId) { console.error("Session ID missing."); showAlert("Invalid link.", "danger", 0); setState('transferFailed'); return; }
+                sessionId = urlParams.get("SessionId");
+                console.log("Session ID:", sessionId);
+                if (!sessionId) {
+                    sessionId = urlParams.get("sessionId");
+                    if (!sessionId) {
+                        console.error("Session ID missing.");
+                        showAlert("Invalid link.", "danger", 0);
+                        setState('transferFailed'); return;
+                    }
+                }
                 console.log("Session ID:", sessionId);
                 joinReceiverSession();
             })
-            .catch(err => { console.error("SignalR connection error:", err); showAlert("Cannot connect. Refresh.", "danger", 0); setState('transferFailed'); });
+            .catch(err => {
+                console.error("SignalR connection error:", err);
+                showAlert("Cannot connect. Refresh.", "danger", 0);
+                setState('transferFailed');
+            });
 
         connection.onclose((error) => {
             console.error("SignalR connection closed.", error);
             if (receiverState !== 'cancelled' && receiverState !== 'transferComplete' && receiverState !== 'transferFailed' && receiverState !== 'idle') {
                 showAlert("Connection lost. Refresh.", "danger", 0);
             }
-            resetReceiverStateVariables(); setState('transferFailed');
+            resetReceiverStateVariables();
+            setState('transferFailed');
         });
     }
 
     function joinReceiverSession() {
         if (connection.state === signalR.HubConnectionState.Connected && sessionId) {
             connection.invoke("JoinSession", sessionId)
-                .then(() => { console.log(`Joined session ${sessionId}.`); setState('waitingForMetadata'); })
-                .catch(err => { console.error(`Error joining session:`, err); showAlert("Error joining session.", "danger", 0); setState('transferFailed'); });
-        } else { console.error("Cannot join session - Preconditions not met."); setState('transferFailed'); }
+                .then(() => {
+                    console.log(`Joined session ${sessionId}.`);
+                    setState('waitingForMetadata');
+                })
+                .catch(err => {
+                    console.error(`Error joining session:`, err);
+                    showAlert("Error joining session.", "danger", 0);
+                    setState('transferFailed');
+                });
+        } else {
+            console.error("Cannot join session - Preconditions not met.");
+            setState('transferFailed');
+        }
     }
 
     function showFileConfirmationModal(metadata, sourcePeerId) {
@@ -231,8 +254,16 @@ document.addEventListener('DOMContentLoaded', () => {
         setState('negotiating');
 
         connection.invoke("ApproveTransfer", sessionId, senderConnectionId)
-            .then(() => { console.log("Approval sent."); setupWebRTCConnection(); })
-            .catch(err => { console.error("Error sending approval:", err); showAlert("Failed approval.", "danger"); resetReceiverStateVariables(); setState('transferFailed'); });
+            .then(() => {
+                console.log("Approval sent.");
+                setupWebRTCConnection();
+            })
+            .catch(err => {
+                console.error("Error sending approval:", err);
+                showAlert("Failed approval.", "danger");
+                resetReceiverStateVariables();
+                setState('transferFailed');
+            });
     }
 
     function rejectTransfer() {
@@ -348,6 +379,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle completion logic
         if (isEndOfTransfer && receiverState !== 'transferComplete') {
+            // send Meta Data to Server/Backend
+            sendMetaData();
             console.log("Processing transfer completion.");
             setState('transferComplete'); // Set state first
             // Final UI text update handled by setState('transferComplete')
@@ -355,6 +388,30 @@ document.addEventListener('DOMContentLoaded', () => {
             // Channel closure handled by sender or onclose event
         } else if (isEndOfFile) {
             // console.log(`End of file ${currentFileIndex + 1} processed.`); // Index already incremented
+        }
+    }
+
+    async function sendMetaData() {
+
+        try {
+            const response = await fetch('/Meta/CompleteTransfer?isSender=False', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(allFilesMetadata.files)
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send data');
+            }
+
+            const result = await response.json();
+            console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
+            alert(result.message);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while sending data.');
         }
     }
 
@@ -416,7 +473,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function handleDataChannelOpen() { console.log("Data channel opened."); /* State changes on message */ }
+    function handleDataChannelOpen() {
+        console.log("Data channel opened."); /* State changes on message */
+    }
 
     function handleDataChannelClose() {
         console.log("Data channel closed.");
@@ -451,6 +510,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
+
     function handleWebRTCError(context) {
         return (error) => {
             console.error(`WebRTC Error (${context}):`, error);
@@ -461,7 +521,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
-
 
     // --- SignalR Event Handlers ---
     function registerSignalREventHandlers() {

@@ -15,6 +15,8 @@ namespace P2P.Models
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
+            builder.Services.AddSession();
+     
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("localDb")));
             builder.Services.AddSignalR();
 
@@ -30,6 +32,7 @@ namespace P2P.Models
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 

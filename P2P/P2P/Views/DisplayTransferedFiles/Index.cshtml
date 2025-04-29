@@ -1,0 +1,323 @@
+﻿@using System.Text.Json
+@using System.Text.Json.Serialization
+@{
+    ViewData["Title"] = "File History";
+
+    var options = new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                Converters =
+        {
+            new JsonStringEnumConverter(),
+            new JsonDateOnlyConverter(),
+            new JsonTimeOnlyConverter()
+        }
+            };
+
+    var receivedFiles = Model.Where(x => x.isSender == false).ToList();
+    var sentFiles = Model.Where(x => x.isSender == true).ToList();
+}
+@model List<P2P.Models.TransferHistory>
+
+<div class="container py-4">
+    <h2 class="text-center mb-4"> Received Files History</h2>
+
+    <div class="card shadow-sm mb-5 p-4">
+        <div class="d-flex justify-content-end mb-3">
+            <div class="input-group" style="max-width: 300px;">
+                <input type="text" class="form-control" id="receivedFileSearch" placeholder=" Search by file name..." />
+            </div>
+        </div>
+
+        <div id="receivedHistoryGrid" class="ag-theme-alpine" style="height: 700px; width: 100%;"></div>
+    </div>
+
+    <h2 class="text-center my-4"> Sent Files History</h2>
+
+    <div class="card shadow-sm mb-5 p-4">
+        <div class="d-flex justify-content-end mb-3">
+            <div class="input-group" style="max-width: 300px;">
+                <input type="text" class="form-control" id="sentFileSearch" placeholder=" Search by file name..." />
+            </div>
+        </div>
+
+        <div id="sentHistoryGrid" class="ag-theme-alpine" style="height: 700px; width: 100%;"></div>
+    </div>
+
+</div>
+
+<div class="card shadow-sm p-4 mb-5">
+    <h2 class="text-center mb-4">Data Transfer Summary</h2>
+    <canvas id="dataTransferPieChart" style="max-height:400px;"></canvas>
+</div>
+
+
+
+
+
+<!-- AG Grid Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+
+<!-- chart.js script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- chartjs-plugin-datalabels-->
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Function to dynamically adjust the AG Grid height based on the available space
+        function adjustGridHeight() {
+            const headerHeight = document.querySelector('h2').offsetHeight; // Adjust according to your page's header height
+            const padding = 50; // Adjust based on the padding or margin of the grid containers
+            const gridHeight = window.innerHeight - headerHeight - padding;
+
+            document.querySelector('#receivedHistoryGrid').style.height = gridHeight + 'px';
+            document.querySelector('#sentHistoryGrid').style.height = gridHeight + 'px';
+        }
+
+        // Adjust the grid height when the page loads
+        adjustGridHeight();
+
+        // Adjust the grid height when the window is resized
+        window.addEventListener('resize', function() {
+            adjustGridHeight();
+            if (receivedGridApi) receivedGridApi.sizeColumnsToFit();
+            if (sentGridApi) sentGridApi.sizeColumnsToFit();
+        });
+
+        let totalDataSent = 0;
+        let totalDataRecieved = 0;
+        let dataSentInMB = 0;
+        let dataRecievedInMB = 0;
+
+        function calculateTotalBytes(rowData) {
+            let total = 0;
+            rowData.forEach(row => {
+                let fileData = [];
+                try { fileData = JSON.parse(row.fileTransfered); }
+                catch (e) { console.error("Error parsing fileTransfered:", e); }
+                if (Array.isArray(fileData)) {
+                    fileData.forEach(item => {
+                        if (Array.isArray(item) && item.length === 2) {
+                            total += parseInt(item[0], 10);
+                        }
+                    });
+                }
+            });
+            return total;
+        }
+
+        function formatFileSize(sizeInBytes) {
+            if (sizeInBytes < 1024) return sizeInBytes + ' Bytes';
+            if (sizeInBytes < 1024 * 1024) return (sizeInBytes / 1024).toFixed(2) + ' KB';
+            if (sizeInBytes < 1024 * 1024 * 1024) return (sizeInBytes / (1024 * 1024)).toFixed(1) + ' MB';
+            return (sizeInBytes / (1024 * 1024 * 1024)).toFixed(2) + ' GB';
+        }
+
+        let receivedGridApi, sentGridApi;
+
+        const columnDefs = [
+            {
+                headerName: "ID",
+                valueGetter: "node.rowIndex + 1",
+                width: 70
+            },
+            {
+                headerName: "Date",
+                field: "date",
+                filter: 'agDateColumnFilter',
+                minWidth: 140
+            },
+            {
+                headerName: "File Size",
+                field: "fileTransfered",
+                minWidth: 130,
+                cellRenderer: function(params) {
+                    let fileData = [];
+                    try { fileData = JSON.parse(params.value); }
+                    catch (e) { console.error("Error parsing fileTransfered:", e); }
+                    if (Array.isArray(fileData) && fileData.length) {
+                        return fileData.map(item => {
+                            if (Array.isArray(item) && item.length === 2) {
+                                return formatFileSize(parseInt(item[0], 10));
+                            }
+                            return "N/A";
+                        }).join("<br>");
+                    }
+                    return "N/A";
+                }
+            },
+            {
+                headerName: "File Name",
+                field: "fileTransfered",
+                flex: 2,
+                cellRenderer: function(params) {
+                    let fileData = [];
+                    try { fileData = JSON.parse(params.value); }
+                    catch (e) { console.error("Error parsing fileTransfered:", e); }
+                    if (Array.isArray(fileData) && fileData.length) {
+                        return fileData.map(item => {
+                            if (Array.isArray(item) && item.length === 2) {
+                                return item[1];
+                            }
+                            return "N/A";
+                        }).join("<br>");
+                    }
+                    return "N/A";
+                }
+            },
+            {
+                headerName: "Time",
+                field: "time",
+                minWidth: 120
+            }
+        ];
+
+        const receivedGridOptions = {
+            columnDefs: columnDefs,
+            rowData: @(receivedFiles != null ? Html.Raw(JsonSerializer.Serialize(receivedFiles, options)) : "[]"),
+            pagination: true,
+            paginationPageSize: 10,
+            animateRows: true,
+            defaultColDef: {
+                flex: 1,
+                wrapText: true,
+                autoHeight: true,
+                minWidth: 100,
+                sortable: true,
+                filter: true,
+                resizable: true
+            },
+            domLayout: "autoHeight",
+            onGridReady: params => { receivedGridApi = params.api; }
+        };
+
+        const sentGridOptions = {
+            columnDefs: columnDefs,
+            rowData: @(sentFiles != null ? Html.Raw(JsonSerializer.Serialize(sentFiles, options)) : "[]"),
+            pagination: true,
+            paginationPageSize: 10,
+            animateRows: true,
+            defaultColDef: {
+                flex: 1,
+                wrapText: true,
+                autoHeight: true,
+                minWidth: 100,
+                sortable: true,
+                filter: true,
+                resizable: true
+            },
+            domLayout: "autoHeight",
+            onGridReady: params => { sentGridApi = params.api; }
+        };
+
+        agGrid.createGrid(document.querySelector('#receivedHistoryGrid'), receivedGridOptions);
+        agGrid.createGrid(document.querySelector('#sentHistoryGrid'), sentGridOptions);
+
+        const dataRecieved =  @(receivedFiles != null ? Html.Raw(JsonSerializer.Serialize(receivedFiles, options)) : "[]");
+        const dataSent = @(sentFiles != null ? Html.Raw(JsonSerializer.Serialize(sentFiles, options)) : "[]");
+
+        totalDataRecieved = calculateTotalBytes(dataRecieved);
+        totalDataSent = calculateTotalBytes(dataSent);
+
+        dataRecievedInMB = (totalDataRecieved / (1024 * 1024)).toFixed(2);
+        dataSentInMB = (totalDataSent / (1024 * 1024)).toFixed(2);
+
+        console.log(dataRecievedInMB);
+        console.log(dataSentInMB);
+
+        // Create Gauge-like Doughnut Chart
+        const ctx = document.getElementById('dataTransferPieChart').getContext('2d');
+
+        const totalDataMB = (parseFloat(dataRecievedInMB) + parseFloat(dataSentInMB)).toFixed(2);
+
+        const dataTransferGaugeChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Data Received (MB)', 'Data Sent (MB)'],
+                datasets: [{
+                    data: [dataRecievedInMB, dataSentInMB],
+                    backgroundColor: [
+                        '#1a80bb',  
+                        '#ea801c'   
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                rotation: -90,
+                circumference: 180,  //
+                cutout: '70%',  
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + ' MB';
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#111',
+                        font: {
+                            weight: 'bold',
+                            size: 16
+                        },
+                        formatter: (value, ctx) => {
+                            const label = ctx.chart.data.labels[ctx.dataIndex];
+                            return label + '\n' + value + ' MB';
+                        }
+                    }
+                },
+                animation: {
+                    animateRotate: true,
+                    animateScale: true
+                }
+            },
+            plugins: [ChartDataLabels]  
+        });
+
+        
+        const centerText = {
+            id: 'centerText',
+            beforeDraw(chart, args, options) {
+                const { width } = chart;
+                const { height } = chart;
+                const ctx = chart.ctx;
+                ctx.restore();
+                const fontSize = (height / 114).toFixed(2);
+                ctx.font = `${fontSize}em sans-serif`;
+                ctx.textBaseline = 'middle';
+                ctx.fillStyle = '#333';
+
+                const text = totalDataMB + ' MB';
+                const textX = Math.round((width - ctx.measureText(text).width) / 2);
+                const textY = height / 1.5;
+
+                ctx.fillText(text, textX, textY);
+                ctx.save();
+            }
+        };
+
+        dataTransferGaugeChart.config.plugins.push(centerText);
+        dataTransferGaugeChart.update();
+
+        document.getElementById('receivedFileSearch').addEventListener('input', function () {
+            if (receivedGridApi) receivedGridApi.setGridOption('quickFilterText', this.value);
+        });
+
+        document.getElementById('sentFileSearch').addEventListener('input', function () {
+            if (sentGridApi) sentGridApi.setGridOption('quickFilterText', this.value);
+        });
+
+    });
+
+</script>

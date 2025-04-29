@@ -69,9 +69,16 @@
                         </p>
 
                         <div class="d-flex flex-column align-items-center gap-4 mb-4">
-                            <div id="share-link" class="fs-5 fw-bold tracking-tight gradient-text" style="overflow-wrap: anywhere;"></div>
+                            <div class="d-flex align-items-center gap-3">
+                                <!-- Increased gap here -->
+                                <div id="share-link" class="fs-5 fw-bold tracking-tight gradient-text" style="overflow-wrap: anywhere;"></div>
+                                <button id="copy-link-btn" class="btn btn-light p-2" style="border: 0.5px solid #ccc;" title="Copy Link">
+                                    <i data-lucide="copy"></i>
+                                </button>
+                            </div>
                             <div id="qrcode" class="mt-2"></div>
                         </div>
+
 
                         <div class="mb-4">
                             <div class="d-flex justify-content-between small mb-1">
@@ -106,65 +113,20 @@
                 }
                 else // Receiver UI
                 {
-                    <div class="text-center">
-                        <div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-warning-soft mb-4" style="width: 80px; height: 80px;">
-                            <i data-lucide="download" style="color:var(--bs-primary-dark); width: 32px; height: 32px;"></i>
-                        </div>
-                        <h3 class="h5 mb-3">Ready to download?</h3>
-                        <p class="text-muted small mb-4">
-                            <span id="recipient-file">Connecting...</span>
-                        </p>
-
-                        <div class="mb-4">
-                            <div class="d-flex justify-content-between small mb-1">
-                                <span>
-                                    <span>Download progress</span>
-                                    <span id="recipient-transfer-stats"></span>
-                                </span>
-                                <span id="recipient-progress-percentage">0%</span>
-                            </div>
-                            <div class="progress" style="height: 8px;">
-                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                                     id="recipient-progress-bar"
-                                     role="progressbar"
-                                     style="width: 0%">
+                    <!-- Modal -->
+                    <div class="modal fade" id="accessModal" tabindex="-1" aria-labelledby="accessModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content shadow-lg rounded-4">
+                                <div class="modal-header border-0 pb-0">
+                                    <h1 class="modal-title fs-4 fw-bold text-center w-100" id="accessModalLabel">Choose Your Access</h1>
                                 </div>
-                            </div>
-                            <div class="d-flex text-muted justify-content-between small mt-1">
-                                <span id="recipient-file-name" class="pe-1" style="overflow-wrap: anywhere"></span> @* Unique ID for Receiver *@
-                                <span id="recipient-file-number"></span>@* Unique ID for Receiver *@
-                            </div>
-                        </div>
-
-                        <div class="mt-4 d-flex gap-2 justify-content-center">
-                            <button type="button" id="receiver-cancel-btn" class="btn btn-outline-danger w-100" style="display: none;">
-                                Cancel Download
-                            </button>
-                        </div>
-
-                        <!-- File Confirmation Modal -->
-                        <div class="modal fade" id="fileConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="fileConfirmModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content border-2 border-dashed">
-                                    <div class="modal-header border-bottom-0">
-                                        <h5 class="modal-title fw-medium" id="fileConfirmModalLabel">Incoming Files</h5>
-                                        @* --- Removed onclick, will use JS listener --- *@
-                                        <button type="button" id="modal-close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body pt-0">
-                                        <p class="text-muted small mb-3">The sender wants to share the following files:</p>
-                                        <div id="modal-files-list">
-                                            <!-- Files will be listed here -->
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer border-top-0">
-                                        @* --- Removed onclick, will use JS listener --- *@
-                                        <button type="button" id="modal-reject-btn" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                                            Reject
-                                        </button>
-                                        <button type="button" id="modal-accept-btn" class="btn btn-dark">
-                                            Accept & Download
-                                        </button>
+                                <div class="modal-body text-center">
+                                    <p class="text-muted mb-4">How would you like to receive your files?</p>
+                                    <div class="d-grid gap-3">
+                                        <a asp-controller="Home" asp-action="Receiver" asp-route-isSender="False" asp-route-isAnonymous="True" asp-route-sessionId="@ViewData["SessionId"]"
+                                           class="btn btn-outline-dark px-4 py-2 fw-semibold">Receive Anonymously</a>
+                                        <a asp-controller="Account" asp-action="Login" asp-route-isSender="False" asp-route-sessionId="@ViewData["SessionId"]"
+                                           class="btn btn-outline-dark px-4 py-2 fw-semibold">Receive via Login</a>
                                     </div>
                                 </div>
                             </div>
@@ -190,11 +152,46 @@
     @if (isSender) // Use the boolean flag here
     {
         <!-- Sender JS -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const copyBtn = document.getElementById('copy-link-btn');
+                const shareLink = document.getElementById('share-link');
+
+                copyBtn.addEventListener('click', function () {
+                    const text = shareLink.textContent || shareLink.innerText;
+                    if (!text.trim()) {
+                        alert("No link to copy!");
+                        return;
+                    }
+
+                    navigator.clipboard.writeText(text)
+                        .then(() => {
+                            
+                            alert("Link is Copied");
+                            
+                            setTimeout(() => {
+                                copyBtn.innerHTML = '<i data-lucide="copy"></i>';  // Revert to copy icon
+                                lucide.createIcons(); // Refresh icons if needed
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy:', err);
+                            alert('Failed to copy the link.');
+                        });
+                });
+            });
+        </script>
         <script src="~/js/sender.js"></script>
     }
-    else
-    {
-        <!-- Receiver JS -->
-        <script src="~/js/receiver.js"></script>
+    else {
+        <script>
+			document.addEventListener('DOMContentLoaded', function () {
+				var accessModal = new bootstrap.Modal(document.getElementById('accessModal'), {
+					backdrop: 'static', // prevent closing by clicking outside
+					keyboard: false      // prevent closing by Esc
+				});
+				accessModal.show();
+			});
+        </script>
     }
 }

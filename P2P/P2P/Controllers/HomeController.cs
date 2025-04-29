@@ -19,7 +19,7 @@ namespace P2P.Controllers
 
         public IActionResult Index(string? sessionId = null)
         {
-            ViewBag.SessionId = sessionId;
+            ViewData["SessionId"] = sessionId;
             return View();
         }
 
@@ -35,6 +35,20 @@ namespace P2P.Controllers
         }
         */
 
+        public IActionResult Receiver(string SessionId,bool? isAnonymous)
+        {
+            if(isAnonymous == true)
+            {
+                ViewData["isAnonymous"] = true;
+            }
+            else
+            {
+                ViewData["isAnonymous"] = false;
+            }
+            Debug.WriteLine("SessionId value is " + SessionId);
+            ViewData["SessionId"] = SessionId;
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

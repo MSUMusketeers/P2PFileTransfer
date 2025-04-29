@@ -1,1 +1,8 @@
+## VS & VS Code folders
 .vs/
+.vscode/
+
+## Build artifacts
+bin/
+obj/
+out/

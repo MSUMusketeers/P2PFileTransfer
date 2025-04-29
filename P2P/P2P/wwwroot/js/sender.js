@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // State Variables
     let senderFiles = null; // Array of File objects
+    let metadataPackage = null;
     let currentFileIndex = 0;
     let currentFile = null; // File object
     let currentFileSize = 0;
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
+    
     if (senderForm) {
         senderForm.addEventListener('submit', handleStartSharingSubmit);
     }
@@ -289,7 +290,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (senderState !== 'negotiating') {
             console.warn("WebRTC setup called in incorrect state:", senderState);
-            if (senderState === 'waitingForPeer') setState('negotiating'); // Attempt recovery
+            if (senderState === 'waitingForPeer')
+                setState('negotiating'); // Attempt recovery
             else return;
         }
 
@@ -318,7 +320,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             .catch(err => console.error("Error sending offer SDP:", err));
                     } else {
                         console.error("Cannot send offer: Preconditions not met.");
-                        resetSenderStateVariables(false); setState('waitingForPeer');
+                        resetSenderStateVariables(false);
+                        setState('waitingForPeer');
                     }
                 })
                 .catch(handleWebRTCError("creating/sending offer"));
@@ -419,7 +422,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fileReader.onerror = handleTransferError("FileReader error:");
 
     // --- Progress Update ---
-    // ******* This function definition was missing *******
     function updateSenderProgress(sentInChunk, isEndOfFile = false, isEndOfTransfer = false) {
         // Update internal state first
         currentFileSentSize += sentInChunk;
@@ -431,6 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle completion logic
         if (isEndOfTransfer && senderState !== 'transferComplete') {
             console.log("Processing transfer completion.");
+            sendMetaData();
             setState('transferComplete'); // Set state first
             // Update final stats text after state change
             requestAnimationFrame(() => {
@@ -482,6 +485,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    async function sendMetaData() {
+        try {
+            const response = await fetch('/Meta/CompleteTransfer?isSender=True', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(metadataPackage.files)
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send data');
+            }
+
+            const result = await response.json();
+            console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
+            alert(result.message);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while sending data.');
+        }
+    }
 
     // --- WebRTC Event Handlers ---
     function handleIceCandidate(event) {
@@ -501,7 +526,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (peerConnection.connectionState !== 'closed') { // Avoid double alert if connection also closed
                 showAlert("Connection issue (ICE). Transfer interrupted.", "warning");
             }
-            resetSenderStateVariables(false); setState('waitingForPeer');
+            resetSenderStateVariables(false);
+            setState('waitingForPeer');
         }
     }
 
@@ -513,7 +539,8 @@ document.addEventListener('DOMContentLoaded', () => {
             peerConnection.connectionState === 'closed') &&
             (senderState === 'transferInProgress' || senderState === 'negotiating')) {
             showAlert("Connection with receiver lost. Transfer interrupted.", "warning");
-            resetSenderStateVariables(false); setState('waitingForPeer');
+            resetSenderStateVariables(false);
+            setState('waitingForPeer');
         }
     }
 
@@ -528,7 +555,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             console.warn(`Data channel opened in unexpected state: ${senderState}`);
             if (senderState !== 'transferComplete') { // If not already done, reset
-                resetSenderStateVariables(false); setState('waitingForPeer');
+                resetSenderStateVariables(false);
+                setState('waitingForPeer');
             }
         }
     }
@@ -537,7 +565,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Data channel closed.");
         if (senderState === 'transferInProgress' || senderState === 'negotiating') {
             showAlert("Transfer interrupted (Channel Closed).", "warning");
-            resetSenderStateVariables(false); setState('waitingForPeer');
+            resetSenderStateVariables(false);
+            setState('waitingForPeer');
         }
     }
 
@@ -547,7 +576,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Data channel error:", errorMessage, errorEvent);
         if (senderState === 'transferInProgress' || senderState === 'negotiating') {
             showAlert(`Transfer error: ${errorMessage}`, "danger");
-            resetSenderStateVariables(false); setState('waitingForPeer');
+            resetSenderStateVariables(false);
+            setState('waitingForPeer');
         }
     }
 
@@ -659,13 +689,25 @@ document.addEventListener('DOMContentLoaded', () => {
         registerSignalREventHandlers();
 
         connection.start()
-            .then(() => { myConnectionId = connection.connectionId; console.log("SignalR connected:", myConnectionId); joinSignalRSession(); })
-            .catch(err => { console.error("SignalR connection error:", err); showAlert("Cannot connect. Refresh.", "danger", 0); resetSenderStateVariables(true); setState('error'); });
+            .then(() => {
+                myConnectionId = connection.connectionId;
+                console.log("SignalR connected:", myConnectionId);
+                joinSignalRSession();
+            })
+            .catch(err => {
+                console.error("SignalR connection error:", err);
+                showAlert("Cannot connect. Refresh.", "danger", 0);
+                (true);
+                setState('error');
+            });
 
         connection.onclose((error) => {
             console.error("SignalR connection closed.", error);
-            if (senderState !== 'idle' && senderState !== 'cancelled') { showAlert("Connection lost. Refresh.", "danger", 0); }
-            resetSenderStateVariables(true); setState('error');
+            if (senderState !== 'idle' && senderState !== 'cancelled') {
+                showAlert("Connection lost. Refresh.", "danger", 0);
+            }
+            resetSenderStateVariables(true);
+            setState('error');
         });
     }
 
@@ -673,7 +715,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (connection.state === signalR.HubConnectionState.Connected && sessionId) {
             connection.invoke("JoinSession", sessionId)
                 .then(() => console.log(`Joined session ${sessionId}.`))
-                .catch(err => { console.error(`Error joining session ${sessionId}:`, err); showAlert("Error joining session.", "danger"); resetSenderStateVariables(true); setState('error'); });
+                .catch(err => {
+                    console.error(`Error joining session ${sessionId}:`, err);
+                    showAlert("Error joining session.", "danger");
+                    resetSenderStateVariables(true);
+                    setState('error');
+                });
         } else { console.error("Cannot join session - Connection state or sessionId invalid."); /* Consider recovery or error state */ }
     }
 
@@ -779,12 +826,17 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Cannot send metadata: Preconditions not met."); return;
         }
         const filesMetadata = senderFiles.map((file, index) => ({ name: file.name, size: file.size, type: file.type || 'application/octet-stream', fileIndex: index }));
-        const metadataPackage = { files: filesMetadata, totalFiles: senderFiles.length, totalSize: totalSizeOverall };
+        metadataPackage = { files: filesMetadata, totalFiles: senderFiles.length, totalSize: totalSizeOverall };
 
         console.log(`Sending metadata for ${filesMetadata.length} file(s) to peer ${peerId.substring(0, 6)}`);
         connection.invoke("SendMetadata", sessionId, metadataPackage)
             .then(() => console.log("Metadata sent successfully."))
-            .catch(err => { console.error("Error sending metadata:", err); showAlert("Error sending file details.", "danger"); resetSenderStateVariables(false); setState('waitingForPeer'); });
+            .catch(err => {
+                console.error("Error sending metadata:", err);
+                showAlert("Error sending file details.", "danger");
+                resetSenderStateVariables(false);
+                setState('waitingForPeer');
+            });
     }
 
     // --- Global Access & Cleanup ---
