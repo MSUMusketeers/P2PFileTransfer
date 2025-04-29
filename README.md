@@ -27,8 +27,6 @@
    ```bash
    git clone https://github.com/yourusername/FileFlow.git
    cd P2P
-   dotnet restore
-   dotnet run
 2. Restore the repository
    ```bash
    dotnet restore
