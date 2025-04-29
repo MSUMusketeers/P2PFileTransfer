@@ -19,6 +19,7 @@ namespace P2P.Controllers
 
         public IActionResult Index()
         {
+           
             int? user_id = HttpContext.Session.GetInt32("user_id");
             if (user_id == null)
             {
@@ -29,6 +30,7 @@ namespace P2P.Controllers
                                             .Where(th => th.UserId == user_id)
                                             .ToList();
 
+
             
             foreach(var item in list)
             {
@@ -37,6 +39,7 @@ namespace P2P.Controllers
                 Console.WriteLine(item.Date);
                 Console.WriteLine(item.FileTransfered);
                 Console.WriteLine(item.Time);
+
             }
 
 
