@@ -123,7 +123,7 @@
                                 <div class="modal-body text-center">
                                     <p class="text-muted mb-4">How would you like to receive your files?</p>
                                     <div class="d-grid gap-3">
-                                        <a asp-controller="Home" asp-action="Receiver" asp-route-isSender="False" asp-route-sessionId="@ViewData["SessionId"]"
+                                        <a asp-controller="Home" asp-action="Receiver" asp-route-isSender="False" asp-route-isAnonymous="True" asp-route-sessionId="@ViewData["SessionId"]"
                                            class="btn btn-outline-dark px-4 py-2 fw-semibold">Receive Anonymously</a>
                                         <a asp-controller="Account" asp-action="Login" asp-route-isSender="False" asp-route-sessionId="@ViewData["SessionId"]"
                                            class="btn btn-outline-dark px-4 py-2 fw-semibold">Receive via Login</a>

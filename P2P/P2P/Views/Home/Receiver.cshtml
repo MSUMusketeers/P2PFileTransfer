@@ -89,6 +89,12 @@
 
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+	<script>
+		var isAnonymous = @Json.Serialize(ViewData["isAnonymous"]);
+		if (isAnonymous === true) {
+			document.getElementById("History").style.display = "none";
+		}
+	</script>
     <script src="~/js/utils.js"></script>
     <script src="~/js/receiver.js"></script>
 }

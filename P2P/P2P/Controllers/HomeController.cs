@@ -35,10 +35,18 @@ namespace P2P.Controllers
         }
         */
 
-        public IActionResult Receiver(string SessionId)
+        public IActionResult Receiver(string SessionId,bool? isAnonymous)
         {
+            if(isAnonymous == true)
+            {
+                ViewData["isAnonymous"] = true;
+            }
+            else
+            {
+                ViewData["isAnonymous"] = false;
+            }
             Debug.WriteLine("SessionId value is " + SessionId);
-            ViewData["SessionId"]=SessionId;
+            ViewData["SessionId"] = SessionId;
             return View();
         }
 
