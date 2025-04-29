@@ -1368,3 +1368,4 @@ D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.pdb
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.genruntimeconfig.cache
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\ref\P2P.dll
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\.Net Project\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
