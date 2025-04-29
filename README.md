@@ -2,6 +2,7 @@
 # FileFlow - P2P File Sharing Web Application
 
 **FileFlow** is a peer-to-peer (P2P) file sharing web application that emphasizes **speed** and **simplicity**. With a focus on **privacy-first design**, FileFlow allows users to transfer files directly between devices using **end-to-end encryption** — without the need for cloud storage or account registration.
+ - 
 
 ## 🚀 Features
 
@@ -13,8 +14,7 @@
 - 📎 Share via links or QR codes
 - 📦 No file size limits
 - ❌ No tracking, cookies, or server-side file storage
-
-#
+- 
 
 ## 🧭 Project Overview
 
