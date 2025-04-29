@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // State Variables
     let senderFiles = null; // Array of File objects
+    let metadataPackage = null;
     let currentFileIndex = 0;
     let currentFile = null; // File object
     let currentFileSize = 0;
@@ -432,6 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle completion logic
         if (isEndOfTransfer && senderState !== 'transferComplete') {
             console.log("Processing transfer completion.");
+            sendMetaData();
             setState('transferComplete'); // Set state first
             // Update final stats text after state change
             requestAnimationFrame(() => {
@@ -483,6 +485,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    async function sendMetaData() {
+        try {
+            const response = await fetch('/Meta/CompleteTransfer?isSender=True', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(metadataPackage.files)
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send data');
+            }
+
+            const result = await response.json();
+            console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
+            alert(result.message);
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while sending data.');
+        }
+    }
 
     // --- WebRTC Event Handlers ---
     function handleIceCandidate(event) {
@@ -802,7 +826,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Cannot send metadata: Preconditions not met."); return;
         }
         const filesMetadata = senderFiles.map((file, index) => ({ name: file.name, size: file.size, type: file.type || 'application/octet-stream', fileIndex: index }));
-        const metadataPackage = { files: filesMetadata, totalFiles: senderFiles.length, totalSize: totalSizeOverall };
+        metadataPackage = { files: filesMetadata, totalFiles: senderFiles.length, totalSize: totalSizeOverall };
 
         console.log(`Sending metadata for ${filesMetadata.length} file(s) to peer ${peerId.substring(0, 6)}`);
         connection.invoke("SendMetadata", sessionId, metadataPackage)

@@ -13,9 +13,10 @@ namespace P2P.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CompleteTransfer([FromBody] List<FileData> filesArray)
+        public async Task<IActionResult> CompleteTransfer([FromBody] List<FileData> filesArray,[FromQuery] bool isSender)
         {
-             List<List<string>> fileTransfered = new List<List<string>>();
+            Console.WriteLine("CompleteTransfer called with isSender: " + isSender);
+            List<List<string>> fileTransfered = new List<List<string>>();
 
             foreach (var file in filesArray)
             {
@@ -37,6 +38,7 @@ namespace P2P.Controllers
                 UserId = user_id, // Replace with actual user ID
                 Time = TimeOnly.FromDateTime(DateTime.Now),
                 Date = DateOnly.FromDateTime(DateTime.Now),
+                isSender = isSender,
                 FileTransfered = JsonSerializer.Serialize(fileTransfered) 
             };
 

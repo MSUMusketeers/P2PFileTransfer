@@ -3,7 +3,7 @@
     --bs-body-font-family: "Geist", Helvetica, Arial, sans-serif;
     --bs-primary: #ff8d13;
     --bs-primary-dark: #d97706;
-    --bs-success-rgb: #00d21b;
+    --bs-success-rgb: 0, 175, 20;
     --bs-warning-soft: rgba(255, 193, 23, 0.25);
     --gradient-start: #ff8d13;
     --gradient-end: #ffc117;

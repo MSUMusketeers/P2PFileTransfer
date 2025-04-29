@@ -19,7 +19,8 @@ namespace P2P.Models
         public DateOnly Date { get; set; }
 
         public string? FileTransfered { get; set; }
- 
+
+        public bool isSender { get; set; }
 
     }
 }

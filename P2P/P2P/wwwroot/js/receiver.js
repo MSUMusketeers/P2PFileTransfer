@@ -171,11 +171,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 myConnectionId = connection.connectionId;
                 console.log("SignalR connected:", myConnectionId);
                 const urlParams = new URLSearchParams(window.location.search);
-                sessionId = urlParams.get("sessionId");
+                sessionId = urlParams.get("SessionId");
+                console.log("Session ID:", sessionId);
                 if (!sessionId) {
-                    console.error("Session ID missing.");
-                    showAlert("Invalid link.", "danger", 0);
-                    setState('transferFailed'); return;
+                    sessionId = urlParams.get("sessionId");
+                    if (!sessionId) {
+                        console.error("Session ID missing.");
+                        showAlert("Invalid link.", "danger", 0);
+                        setState('transferFailed'); return;
+                    }
                 }
                 console.log("Session ID:", sessionId);
                 joinReceiverSession();
@@ -390,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function sendMetaData() {
 
         try {
-            const response = await fetch('/Meta/CompleteTransfer', {
+            const response = await fetch('/Meta/CompleteTransfer?isSender=False', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

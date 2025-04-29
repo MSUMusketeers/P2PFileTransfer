@@ -1,0 +1,94 @@
+﻿@{
+}
+<section class="container py-5">
+	<div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1050; width: 350px;">
+		<!-- Alerts will be injected here -->
+	</div>
+	<div class="text-center mx-auto mb-5" style="max-width: 800px;">
+		<h1 class="display-4 fw-bold tracking-tighter mb-4">
+			Share files directly,<br>
+			<span class="gradient-text">no cloud required</span>
+		</h1>
+		<p class="lead text-muted">
+			Secure, fast, and simple peer-to-peer file transfers. No sign-up, no storage limits, no tracking.
+		</p>
+	</div>
+
+	<div class="mx-auto" style="max-width: 800px;">
+		<div class="card border-2 border-dashed">
+			<div class="card-body p-4">
+				<div class="text-center">
+					<div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-warning-soft mb-4" style="width: 80px; height: 80px;">
+						<i data-lucide="download" style="color:var(--bs-primary-dark); width: 32px; height: 32px;"></i>
+					</div>
+					<h3 class="h5 mb-3">Ready to download?</h3>
+					<p class="text-muted small mb-4">
+						<span id="recipient-file">Connecting...</span>
+					</p>
+					<div class="mb-4">
+						<div class="d-flex justify-content-between small mb-1">
+							<span>
+								<span>Download progress</span>
+								<span id="recipient-transfer-stats"></span>
+							</span>
+							<span id="recipient-progress-percentage">0%</span>
+						</div>
+						<div class="progress" style="height: 8px;">
+							<div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+								 id="recipient-progress-bar"
+								 role="progressbar"
+								 style="width: 0%">
+							</div>
+						</div>
+						<div class="d-flex text-muted justify-content-between small mt-1">
+							<span id="recipient-file-name" class="pe-1" style="overflow-wrap: anywhere"></span> @* Unique ID for Receiver *@
+							<span id="recipient-file-number"></span>@* Unique ID for Receiver *@
+						</div>
+					</div>
+
+					<div class="mt-4 d-flex gap-2 justify-content-center">
+						<button type="button" id="receiver-cancel-btn" class="btn btn-outline-danger w-100" style="display: none;">
+							Cancel Download
+						</button>
+					</div>
+
+					<!-- File Confirmation Modal -->
+					<div class="modal fade" id="fileConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="fileConfirmModalLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content border-2 border-dashed">
+								<div class="modal-header border-bottom-0">
+									<h5 class="modal-title fw-medium" id="fileConfirmModalLabel">Incoming Files</h5>
+									@* --- Removed onclick, will use JS listener --- *@
+									<button type="button" id="modal-close-btn" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body pt-0">
+									<p class="text-muted small mb-3">The sender wants to share the following files:</p>
+									<div id="modal-files-list">
+										<!-- Files will be listed here -->
+									</div>
+								</div>
+								<div class="modal-footer border-top-0">
+									@* --- Removed onclick, will use JS listener --- *@
+									<button type="button" id="modal-reject-btn" class="btn btn-outline-dark" data-bs-dismiss="modal">
+										Reject
+									</button>
+									<button type="button" id="modal-accept-btn" class="btn btn-dark">
+										Accept & Download
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<partial name="_HowItWorks" />
+<partial name="_Features" />
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.min.js"></script>
+    <script src="~/js/utils.js"></script>
+    <script src="~/js/receiver.js"></script>
+}

@@ -1361,10 +1361,10 @@ D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets\msbuild.build
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.P2P.props
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.P2P.props
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.pack.json
-D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.csproj.Up2Date
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.dll
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\refint\P2P.dll
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.pdb
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\P2P.genruntimeconfig.cache
 D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\ref\P2P.dll
+D:\source\P2PFileTransfer\P2P\P2P\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -16,7 +16,7 @@
 
                     <div class="card-body p-4">
                         <!-- Login Form -->
-                        <form asp-action="Login" method="post" class="mt-3">
+                        <form asp-action="Login" method="post" class="mt-3" asp-route-isSender="@ViewData["isSender"]" asp-route-SessionId="@ViewData["SessionId"]">
                             <!-- Email Input -->
                             <div class="mb-4 position-relative">
                                 <div class="input-group input-group-lg">
@@ -81,7 +81,7 @@
 
                             <!-- Signup Link -->
                             <div class="text-center">
-                                <p class="mb-0">Don't have an account? <a asp-action="Signup" style="color: #FF9B18;" class="fw-bold">Sign Up</a></p>
+                                <p class="mb-0">Don't have an account? <a asp-controller="Account" asp-action="Signup" asp-route-isSender="@ViewData["isSender"]" asp-route-SessionId="@ViewData["SessionId"]" style="color: #FF9B18;" class="fw-bold">Sign Up</a></p>
                             </div>
                         </form>
                     </div>
