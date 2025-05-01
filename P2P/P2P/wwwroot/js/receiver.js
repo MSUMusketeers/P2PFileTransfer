@@ -302,6 +302,17 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) { handleWebRTCError("setting up PeerConnection")(error); }
     }
 
+    let writer;
+    let writableStream;
+    let expectingNewFile = true; // Flag to initialize stream for a new file
+
+    // Set up Service Worker for streamsaver
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/js/sw.js')
+            .then(reg => console.log('Service Worker registered:', reg.scope))
+            .catch(err => console.error('Service Worker registration failed:', err));
+    }
+
     function handleDataChannel(event) {
         console.log("Data channel received:", event.channel.label);
         dataChannel = event.channel;
@@ -320,55 +331,84 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function handleDataChannelMessage(event) {
-        if (!(event.data instanceof ArrayBuffer)) { console.warn("Ignoring non-ArrayBuffer data"); return; }
-        if (receiverState === 'cancelled') { console.log("Ignoring message, transfer cancelled."); return; } // Ignore data after cancel
+        if (receiverState === 'cancelled') {
+            console.log("Ignoring message, transfer cancelled.");
+            return;
+        }
 
-        if (receiverState !== 'transferInProgress') { setState('transferInProgress'); if (!transferStartTime) transferStartTime = Date.now(); }
+        if (receiverState !== 'transferInProgress') {
+            setState('transferInProgress');
+            if (!transferStartTime) transferStartTime = Date.now();
+        }
+
+        if (event.data === 'EOF') {
+            console.log(`Received EOF for file: ${currentFileMetadata.name}`);
+            if (currentFileReceivedSize !== currentFileMetadata.size) {
+                console.warn(`Size mismatch: expected ${currentFileMetadata.size}, got ${currentFileReceivedSize}`);
+            }
+            finalizeCurrentFile();
+            return;
+        }
+
+        // Initialize stream for a new file
+        if (expectingNewFile) {
+            const fileMeta = currentFileMetadata;
+            console.log(`Creating download stream for: ${fileMeta.name}`);
+            try {
+                writableStream = streamSaver.createWriteStream(fileMeta.name, {
+                    size: fileMeta.size,
+                    writableStrategy: undefined,
+                    readableStrategy: undefined
+                });
+                writer = writableStream.getWriter();
+                expectingNewFile = false;
+                console.log('Stream and writer initialized successfully');
+            } catch (error) {
+                console.error('Error initializing stream:', error);
+                handleTransferError("Failed to initialize download stream")();
+                return;
+            }
+        }
 
         const chunk = event.data;
-        receivedChunks.push(chunk);
-        updateRecipientProgress(chunk.byteLength); // Update progress state
+        try {
+            writer.write(new Uint8Array(chunk))
+                .catch(error => {
+                    console.error('Error writing chunk:', error);
+                    handleTransferError("Failed to write chunk")();
+                });
+            console.log(`Wrote chunk of size: ${chunk.byteLength} bytes`);
+        } catch (error) {
+            console.error('Error during chunk write:', error);
+            handleTransferError("Failed to process chunk")();
+            return;
+        }
 
-        if (currentFileReceivedSize >= currentFileMetadata.size) {
-            // console.log(`File ${currentFileMetadata.name} received. Processing...`);
-            const fileToProcess = { ...currentFileMetadata };
-            const chunksToProcess = [...receivedChunks];
-            receivedChunks = []; // Clear for next file
+        updateRecipientProgress(chunk.byteLength);
+    }
 
-            setTimeout(() => processAndDownloadFile(fileToProcess, chunksToProcess), 0); // Process async
+    async function finalizeCurrentFile() {
+        try {
+            await writer.close();
+            console.log(`Download saved: ${currentFileMetadata.name}`);
+        } catch (e) {
+            console.error("Failed closing file stream:", e);
+        }
 
-            currentFileIndex++;
-            if (currentFileIndex < allFilesMetadata.files.length) {
-                currentFileMetadata = allFilesMetadata.files[currentFileIndex];
-                currentFileReceivedSize = 0;
-                console.log(`Ready for next file ${currentFileIndex + 1}: ${currentFileMetadata.name}`);
-                updateRecipientProgress(0, true, false); // Mark end of *previous* file
-            } else {
-                console.log("All files received.");
-                updateRecipientProgress(0, true, true); // Mark end of transfer
-            }
+        currentFileIndex++;
+        if (currentFileIndex < allFilesMetadata.files.length) {
+            currentFileMetadata = allFilesMetadata.files[currentFileIndex];
+            currentFileReceivedSize = 0;
+            expectingNewFile = true; // Prepare for next file
+            console.log(`Ready for next file: ${currentFileMetadata.name}`);
+            updateRecipientProgress(0, true, false);
+        } else {
+            console.log("All files received!");
+            updateRecipientProgress(0, true, true);
         }
     }
 
-    function processAndDownloadFile(fileMeta, fileChunks) {
-        if (!fileMeta || fileChunks.length === 0) { console.error("Cannot process: Invalid args."); showAlert(`Failed processing ${fileMeta?.name}.`, "warning"); return; }
-
-        // console.log(`Creating Blob for ${fileMeta.name}...`);
-        const fileBlob = new Blob(fileChunks, { type: fileMeta.type || 'application/octet-stream' });
-
-        if (fileBlob.size !== fileMeta.size) { console.warn(`Size mismatch for ${fileMeta.name}: Expected ${fileMeta.size}, Got ${fileBlob.size}.`); }
-
-        try {
-            const url = URL.createObjectURL(fileBlob);
-            const link = document.createElement('a'); link.href = url; link.download = fileMeta.name;
-            document.body.appendChild(link); link.click(); document.body.removeChild(link);
-            setTimeout(() => URL.revokeObjectURL(url), 200);
-            console.log(`Download triggered: ${fileMeta.name}`);
-        } catch (e) { console.error("Download trigger failed:", e); showAlert(`Download failed for ${fileMeta.name}.`, "danger"); }
-    }
-
     // --- Progress Update ---
-    // ******* This function definition was missing *******
     function updateRecipientProgress(receivedInChunk, isEndOfFile = false, isEndOfTransfer = false) {
         // Update internal state
         currentFileReceivedSize += receivedInChunk;

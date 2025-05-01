@@ -42,8 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let myConnectionId = null;
     let connectedPeerId = null; // The specific peer we are transferring to
     let sessionId = null;
-    let fileReader = new FileReader();
-    const chunkSize = 16 * 1024; // 16KB
+
+    // File Transfer Constants
+    const LOW_WATERMARK = 256 * 1024; // 256 KB
+    const HIGH_WATERMARK = 1024 * 1024; // 1 MB
+    const MAX_CHUNK_SIZE = 64 * 1024; // 64 KB
+
 
     // Initialize SignalR Connection
     const connection = new signalR.HubConnectionBuilder()
@@ -353,73 +357,93 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log(`Starting transfer of file ${currentFileIndex + 1}/${senderFiles.length}: ${currentFile.name} (${formatBytes(currentFileSize)})`);
         updateSenderProgressUI(0); // Update UI for the new file info
-
-        readAndSendSlice(0);
+        readAndSendSlice(); // Start reading currentFile and sending the file slice
     }
 
-    function readAndSendSlice(offset) {
+    async function readAndSendSlice() {
         if (senderState !== 'transferInProgress' || !dataChannel || dataChannel.readyState !== 'open') {
             console.warn(`Sending slice stopped: State=${senderState}, DC=${dataChannel?.readyState}`);
             return;
         }
+
         if (!currentFile) {
             handleTransferError("readAndSendSlice called but currentFile is null.")();
             return;
         }
-        const slice = currentFile.slice(offset, offset + chunkSize);
-        fileReader.readAsArrayBuffer(slice);
+
+        const reader = currentFile.stream().getReader();
+        dataChannel.bufferedAmountLowThreshold = LOW_WATERMARK;
+
+        while (true) {
+            try {
+                if (!dataChannel || dataChannel.readyState !== 'open') {
+                    console.warn("Data channel closed before processing loaded chunk.");
+                    return;
+                }
+
+                const { done, value } = await reader.read();
+
+                if (done) {
+                    dataChannel.send('EOF'); // Signal end of file transfer
+                    break; // Exit the loop to process the next file
+                }
+
+                if (!value || value.byteLength === 0) {
+                    // Check if value is null or empty
+                    console.warn("Empty file stream read, no data to send.");
+                    handleTransferError(`Error reading file ${currentFile?.name}.`)();
+                    return;
+                }
+
+                /* WebRTC data channels use the SCTP protocol under the hood, due to which there’s a maximum message size limit that varies by browser.
+                * The safest is 16 KiB but 64 KiB also works well. (Here CHUNK_SIZE)
+                * See https://lgrahl.de/articles/demystifying-webrtc-dc-size-limit.html
+                * and https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Using_data_channels
+                * and https://stackoverflow.com/questions/56327783/webrtc-datachannel-for-high-bandwidth-application
+                * Since "value" can be larger than the maximum size, we need to split it into chunks and send them separately.
+                */
+                let offset = 0;
+                while (offset < value.byteLength) {
+                    const end = Math.min(offset + MAX_CHUNK_SIZE, value.byteLength);
+                    const subChunk = value.slice(offset, end);
+                    offset = end;
+
+                    console.log(`BufferedAmount: ${dataChannel.bufferedAmount}`);
+                    if (dataChannel.bufferedAmount > HIGH_WATERMARK) {
+                        await waitForLowBuffer();
+                    }
+                    dataChannel.send(subChunk);
+                    updateSenderProgress(subChunk.byteLength, false, false);
+                }
+
+            } catch (error) {
+                if (error instanceof DOMException && error.name === 'InvalidStateError') {
+                    console.warn("Attempted to send on closed/null data channel.");
+                } else {
+                    handleTransferError("Error sending data chunk:")(error);
+                }
+            }
+        }
+        console.log(`Finished sending file ${currentFileIndex + 1}: ${currentFile.name}`);
+        currentFileIndex++;
+        if (currentFileIndex < senderFiles.length) {
+            updateSenderProgress(0, true, false); // Reset progress for next file
+            setTimeout(sendNextFile, 10);
+        } else {
+            console.log("All files sent signal.");
+            updateSenderProgress(0, true, true); // Final update signals completion
+        }
     }
 
-    // Defined once outside the loop
-    fileReader.onload = (event) => {
-        if (!dataChannel || dataChannel.readyState !== 'open') {
-            console.warn("Data channel closed before processing loaded chunk.");
-            return;
-        }
-
-        const chunk = event.target.result;
-        if (!chunk || chunk.byteLength === 0) {
-            console.warn("FileReader read empty chunk for " + currentFile?.name);
-            handleTransferError(`Error reading file ${currentFile?.name}.`)();
-            return;
-        }
-
-        try {
-            const bufferThreshold = chunkSize * 20;
-            if (dataChannel.bufferedAmount > bufferThreshold) {
-                setTimeout(() => { fileReader.onload(event); }, 50);
-                return;
-            }
-
-            dataChannel.send(chunk);
-            const sentSizeBeforeUpdate = currentFileSentSize;
-            const isEndOfCurrentFile = (sentSizeBeforeUpdate + chunk.byteLength) >= currentFileSize;
-
-            updateSenderProgress(chunk.byteLength, isEndOfCurrentFile, false); // Update state and UI
-
-            if (isEndOfCurrentFile) {
-                console.log(`Finished sending file ${currentFileIndex + 1}: ${currentFile.name}`);
-                currentFileIndex++;
-                if (currentFileIndex < senderFiles.length) {
-                    setTimeout(sendNextFile, 10);
-                } else {
-                    console.log("All files sent signal.");
-                    updateSenderProgress(0, true, true); // Final update signals completion
-                }
-            } else {
-                const nextOffset = currentFileSentSize; // Progress function updated it
-                setTimeout(() => readAndSendSlice(nextOffset), 0); // Yield before reading next
-            }
-        } catch (error) {
-            if (error instanceof DOMException && error.name === 'InvalidStateError') {
-                console.warn("Attempted to send on closed/null data channel.");
-            } else {
-                handleTransferError("Error sending data chunk:")(error);
-            }
-        }
-    };
-
-    fileReader.onerror = handleTransferError("FileReader error:");
+    function waitForLowBuffer() {
+        return new Promise(resolve => {
+            const onLow = () => {
+                dataChannel.removeEventListener('bufferedamountlow', onLow);
+                resolve();
+            };
+            dataChannel.addEventListener('bufferedamountlow', onLow);
+        });
+    }
 
     // --- Progress Update ---
     function updateSenderProgress(sentInChunk, isEndOfFile = false, isEndOfTransfer = false) {
@@ -468,7 +492,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Only update file name/number if not complete state (setState handles final text)
             if (senderState !== 'transferComplete') {
-                currentFileNameElement.textContent = currentFile.name;
+                currentFileNameElement.textContent = currentfile? currentFile.name : '';
                 fileNumberElement.textContent = `(${currentFileIndex + 1}/${senderFiles.length})`;
             }
 
@@ -593,6 +617,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
+
     function handleWebRTCError(context) {
         return (error) => {
             console.error(`WebRTC Error (${context}):`, error);
