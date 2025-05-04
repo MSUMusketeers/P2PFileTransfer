@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Login";
 }
 
@@ -24,7 +24,7 @@
                                         <i class="fas fa-envelope" style="color: #FF9B18;"></i>
                                     </span>
                                     <input type="email" class="form-control border-start-0 ps-0"
-                                           id="email" name="Email" required placeholder="Email address">
+                                    id="email" name="Email" required placeholder="Email address">
                                 </div>
                             </div>
 
@@ -35,7 +35,7 @@
                                         <i class="fas fa-lock" style="color: #FF9B18;"></i>
                                     </span>
                                     <input type="password" class="form-control border-start-0 ps-0"
-                                           id="password" name="Password" required placeholder="Password">
+                                    id="password" name="Password" required placeholder="Password">
                                     <button type="button" class="btn btn-light border border-start-0" onclick="togglePassword()">
                                         <i class="fas fa-eye" id="toggle-icon"></i>
                                     </button>
@@ -55,7 +55,13 @@
                             <button type="submit" class="btn btn-lg w-100 mb-4 fw-bold text-uppercase text-white" style="background-color: #FF9B18; border-color: #FF9B18;">
                                 Log In
                             </button>
-
+                            <!-- Guest Login Option -->
+                            @if (ViewData["isSender"].ToString() == "True")
+                            {
+                                <div class="text-center mb-2">
+                                    <p class="mb-0"><a asp-controller="Home" asp-action="Index" asp-route-isAnonymous="True" style="color: #FF9B18;" class="fw-bold">Continue As Guest</a></p>
+                                </div>
+                            }
                             <!-- Divider -->
                             <div class="d-flex align-items-center mb-4">
                                 <div class="border-bottom flex-grow-1"></div>
@@ -65,16 +71,16 @@
 
                             <!-- Social Login -->
                             <div class="d-flex justify-content-center gap-3 mb-4">
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
                                     <i class="fab fa-google"></i>
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
                                     <i class="fab fa-apple"></i>
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2">
+                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
                                     <i class="fab fa-twitter"></i>
                                 </a>
                             </div>
@@ -83,6 +89,7 @@
                             <div class="text-center">
                                 <p class="mb-0">Don't have an account? <a asp-controller="Account" asp-action="Signup" asp-route-isSender="@ViewData["isSender"]" asp-route-SessionId="@ViewData["SessionId"]" style="color: #FF9B18;" class="fw-bold">Sign Up</a></p>
                             </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -91,6 +98,51 @@
     </div>
 </div>
 
+
+<style>
+    .signup-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .signup-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+	.social-btn:hover {
+		background-color: #f8f9fa;
+		transform: translateY(-2px);
+	}
+
+    .form-control:focus, .form-check-input:checked {
+        border-color: #FF9B18;
+        box-shadow: 0 0 0 0.25rem rgba(255, 155, 24, 0.25);
+    }
+
+    .btn-outline-secondary:hover {
+        border-color: #FF9B18;
+        color: #FF9B18;
+        background-color: transparent;
+    }
+
+    .input-group:focus-within {
+        box-shadow: 0 0 0 0.25rem rgba(255, 155, 24, 0.25);
+    }
+
+    .input-group:focus-within .input-group-text,
+    .input-group:focus-within .form-control {
+        border-color: #FF9B18;
+    }
+</style>
 <!-- Password Visibility Toggle -->
 <script>
     const navbar = document.getElementById("navbar");
