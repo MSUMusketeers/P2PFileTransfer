@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using P2P.Models;
 using P2P.Context;
 using System.Diagnostics;
@@ -20,7 +20,10 @@ namespace P2P.Controllers
             if (!isSender.HasValue)
             {
                 isSender = true;
-                SessionId = "";
+                SessionId = null;
+            }
+            if(SessionId!=null){
+                isSender = false;
             }
             ViewData["isSender"] = isSender;
             ViewData["SessionId"] = SessionId;
@@ -39,7 +42,7 @@ namespace P2P.Controllers
                 {
                     return RedirectToAction("Receiver", "Home", new {SessionId=SessionId});
                 }
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home",new {isAnonymous=false});
             }
             ViewBag.Message = "Invalid email or password";
             return View();
