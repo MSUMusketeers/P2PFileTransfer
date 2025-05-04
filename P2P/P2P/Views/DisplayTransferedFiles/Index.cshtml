@@ -1,4 +1,4 @@
-﻿@using System.Text.Json
+@using System.Text.Json
 @using System.Text.Json.Serialization
 @{
     ViewData["Title"] = "File History";
@@ -21,15 +21,13 @@
 
 <div class="container py-4">
     <h2 class="text-center mb-4"> Received Files History</h2>
-
     <div class="card shadow-sm mb-5 p-4">
         <div class="d-flex justify-content-end mb-3">
             <div class="input-group" style="max-width: 300px;">
                 <input type="text" class="form-control" id="receivedFileSearch" placeholder=" Search by file name..." />
             </div>
         </div>
-
-        <div id="receivedHistoryGrid" class="ag-theme-alpine" style="height: 700px; width: 100%;"></div>
+        <div id="receivedHistoryGrid" class="ag-theme-alpine" style="width: 100%;"></div>
     </div>
 
     <h2 class="text-center my-4"> Sent Files History</h2>
@@ -41,14 +39,16 @@
             </div>
         </div>
 
-        <div id="sentHistoryGrid" class="ag-theme-alpine" style="height: 700px; width: 100%;"></div>
+        <div id="sentHistoryGrid" class="ag-theme-alpine" style="width: 100%;"></div>
     </div>
 
 </div>
 
-<div class="card shadow-sm p-4 mb-5">
-    <h2 class="text-center mb-4">Data Transfer Summary</h2>
-    <canvas id="dataTransferPieChart" style="max-height:400px;"></canvas>
+<div class="col-12 col-md-6 mb-4 mx-auto">
+    <div class="card shadow-sm p-4 text-center" style="width: 100%;">
+        <h4 class="mb-4" id="PieChart" style="font-weight: 600;">Data Transfer Summary</h4>
+        <canvas id="dataTransferPieChart" style="max-height: 400px;"></canvas>
+    </div>
 </div>
 
 
@@ -68,26 +68,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-
-        // Function to dynamically adjust the AG Grid height based on the available space
-        function adjustGridHeight() {
-            const headerHeight = document.querySelector('h2').offsetHeight; // Adjust according to your page's header height
-            const padding = 50; // Adjust based on the padding or margin of the grid containers
-            const gridHeight = window.innerHeight - headerHeight - padding;
-
-            document.querySelector('#receivedHistoryGrid').style.height = gridHeight + 'px';
-            document.querySelector('#sentHistoryGrid').style.height = gridHeight + 'px';
-        }
-
-        // Adjust the grid height when the page loads
-        adjustGridHeight();
-
-        // Adjust the grid height when the window is resized
-        window.addEventListener('resize', function() {
-            adjustGridHeight();
-            if (receivedGridApi) receivedGridApi.sizeColumnsToFit();
-            if (sentGridApi) sentGridApi.sizeColumnsToFit();
-        });
 
         let totalDataSent = 0;
         let totalDataRecieved = 0;
@@ -235,55 +215,51 @@
 
         const totalDataMB = (parseFloat(dataRecievedInMB) + parseFloat(dataSentInMB)).toFixed(2);
 
-        const dataTransferGaugeChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Data Received (MB)', 'Data Sent (MB)'],
-                datasets: [{
-                    data: [dataRecievedInMB, dataSentInMB],
-                    backgroundColor: [
-                        '#1a80bb',  
-                        '#ea801c'   
-                    ],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                rotation: -90,
-                circumference: 180,  //
-                cutout: '70%',  
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom'
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.label + ': ' + context.parsed + ' MB';
-                            }
-                        }
-                    },
-                    datalabels: {
-                        color: '#111',
+            const dataTransferPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Data Received (MB)', 'Data Sent (MB)'],
+            datasets: [{
+                data: [dataRecievedInMB, dataSentInMB],
+                backgroundColor: [
+                    '#1a80bb',
+                    '#ea801c'
+                ],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'bottom',
+                    labels: {
                         font: {
-                            weight: 'bold',
-                            size: 16
-                        },
-                        formatter: (value, ctx) => {
-                            const label = ctx.chart.data.labels[ctx.dataIndex];
-                            return label + '\n' + value + ' MB';
+                            family: 'Segoe UI',
+                            size: 14
                         }
                     }
                 },
-                animation: {
-                    animateRotate: true,
-                    animateScale: true
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            return context.label + ': ' + context.parsed + ' MB';
+                        }
+                    }
+                },
+                datalabels: {
+                    display: false
                 }
             },
-            plugins: [ChartDataLabels]  
-        });
+            animation: {
+                animateRotate: true,
+                animateScale: true
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+
 
         
         const centerText = {
