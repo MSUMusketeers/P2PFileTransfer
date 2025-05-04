@@ -17,23 +17,12 @@ namespace P2P.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(string? sessionId = null)
+        public IActionResult Index(bool isAnonymous=false, string? sessionId = null)
         {
             ViewData["SessionId"] = sessionId;
+            ViewData["isAnonymous"] = isAnonymous;
             return View();
         }
-
-        // This POST action is effectively replaced by the client-side JavaScript
-        // handling the form submission and starting the SignalR/WebRTC process.
-        /*
-        [HttpPost]
-        public IActionResult StartSharing(FileViewModel model)
-        {
-            can be used to store files in db
-
-            return Accepted();
-        }
-        */
 
         public IActionResult Receiver(string SessionId,bool? isAnonymous)
         {
@@ -57,4 +46,3 @@ namespace P2P.Controllers
         }
     }
 }
-
