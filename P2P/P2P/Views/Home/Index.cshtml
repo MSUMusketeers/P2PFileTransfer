@@ -1,4 +1,4 @@
-﻿@* Remove @model directive if FileViewModel is no longer needed by this view *@
+@* Remove @model directive if FileViewModel is no longer needed by this view *@
 @{
     ViewData["Title"] = "FileFlow - Secure P2P File Transfer";
     // Determine if this is the sender or receiver view based on ViewBag.SessionId
@@ -152,6 +152,12 @@
     @if (isSender) // Use the boolean flag here
     {
         <!-- Sender JS -->
+        <script>
+            var isAnonymous = @Json.Serialize(ViewData["isAnonymous"]);
+            if (isAnonymous === true) {
+                document.getElementById("History").style.display = "none";
+            }
+        </script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const copyBtn = document.getElementById('copy-link-btn');
