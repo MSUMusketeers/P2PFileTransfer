@@ -25,7 +25,7 @@
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/FileFlow.git
+   https://github.com/MSUMusketeers/P2PFileTransfer.git
    cd P2P
 2. Restore the repository
    ```bash
