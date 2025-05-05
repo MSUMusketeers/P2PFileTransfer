@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle completion logic
         if (isEndOfTransfer && receiverState !== 'transferComplete') {
-            // send Meta Data to Server/Backend
+            // Send History Meta Data to Server/Backend
             sendMetaData();
             console.log("Processing transfer completion.");
             setState('transferComplete'); // Set state first
@@ -448,7 +448,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const result = await response.json();
             console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
-            alert(result.message);
         } catch (error) {
             console.error('Error:', error);
             alert('An error occurred while sending data.');

@@ -6,7 +6,7 @@
 }
 
 <section class="container py-5">
-    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1050; width: 350px;">
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="display: none; z-index: 1050; width: 350px;">
         <!-- Alerts will be injected here -->
     </div>
     <div class="text-center mx-auto mb-5" style="max-width: 800px;">
@@ -34,7 +34,7 @@
                         <form id="sender-form">
                             <div class="text-center p-5 rounded border border-dashed" id="dropZone">
                                 <div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-light mb-4" style="width: 80px; height: 80px;">
-                                    <i data-lucide="file" class="opacity-75"></i>
+                                    <i data-lucide="file" style="width: 32px; height: 32px; opacity: 0.75"></i>
                                 </div>
                                 <h3 class="h5 mb-3">Drag & drop your files here</h3>
                                 <p class="text-muted small mb-4">or click to browse files from your device</p>
@@ -101,13 +101,13 @@
                             </div>
                         </div>
 
-                        <div class="mt-4 d-flex gap-2 justify-content-center">
+                        <div class="mt-4 d-flex flex-column gap-2 justify-content-center">
                             <button type="button" id="cancel-transfer-btn" class="btn btn-outline-danger w-100" style="display: none;">
                                 Cancel Transfer
                             </button>
                             <button type="button" id="send-again-btn" class="btn btn-dark w-100" style="display: none;">
                                 Share Again <i data-lucide="refresh-cw" class="ms-2" style="width:16px; height:16px;"></i>
-                            </button>
+                            </button>                            
                         </div>
                     </div>
                 }

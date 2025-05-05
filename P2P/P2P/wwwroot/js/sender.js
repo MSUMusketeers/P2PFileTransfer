@@ -457,6 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle completion logic
         if (isEndOfTransfer && senderState !== 'transferComplete') {
             console.log("Processing transfer completion.");
+            // Send History Meta data to Server/Backend
             sendMetaData();
             setState('transferComplete'); // Set state first
             // Update final stats text after state change
@@ -492,7 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Only update file name/number if not complete state (setState handles final text)
             if (senderState !== 'transferComplete') {
-                currentFileNameElement.textContent = currentfile? currentFile.name : '';
+                currentFileNameElement.textContent = currentFile ? currentFile.name : '';
                 fileNumberElement.textContent = `(${currentFileIndex + 1}/${senderFiles.length})`;
             }
 
@@ -525,7 +526,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const result = await response.json();
             console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
-            alert(result.message);
         } catch (error) {
             console.error('Error:', error);
             alert('An error occurred while sending data.');

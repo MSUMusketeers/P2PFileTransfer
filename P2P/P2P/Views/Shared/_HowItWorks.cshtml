@@ -1,4 +1,4 @@
-﻿<section id="how-it-works" class="bg-light py-5 position-relative">
+﻿<section id="how-it-works" style="background-color: #fcfcfd" class="py-5 position-relative">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 800px;">
             <h2 class="display-5 fw-bold tracking-tighter mb-3">
@@ -9,60 +9,51 @@
             </p>
         </div>
 
-        <div class="row g-4 justify-content-center align-items-center position-relative" role="list">
+        <div class="row g-4 justify-content-center position-relative" role="list">
             <div class="col-md-3 text-center step-column" id="step-connect" role="listitem">
                 <div class="d-inline-flex justify-content-center align-items-center rounded-circle step-icon bg-warning-soft mb-4"
                      style="width: 80px; height: 80px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <i data-lucide="wifi" class="step-icon" 
+                    <i data-lucide="hard-drive-upload" class="step-icon"
                        style="width: 40px; height: 40px; color: #f5a623;"></i>
                 </div>
-                <h3 class="h4 fw-semibold tracking-tight mb-3 step-title">Connect</h3>
+                <h3 class="h4 fw-semibold tracking-tight mb-3 step-title">Upload</h3>
                 <p class="text-muted mb-4">
-                    Select your files and generate a unique sharing code
+                    Select your files and generate a unique sharing link and QR code
                 </p>
             </div>
 
-            <div class="col-md-1 text-center d-none d-md-flex justify-content-center align-items-center">
+            <div class="col-md-1 mt-0 mt-md-3 text-center d-flex justify-content-center align-items-center">
                 <i data-lucide="arrow-right" class="step-arrow" style="font-size: 2rem; color: #333;"></i>
             </div>
 
             <div class="col-md-3 text-center step-column" id="step-share" role="listitem">
-                <div class="d-inline-flex justify-content-center align-items-center rounded-circle step-icon bg-warning-soft mb-4"
+                <div class="d-inline-flex justify-content-center align-items-center rounded-circle step-icon bg-warning-soft mb-4 pe-1"
                      style="width: 80px; height: 80px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <i data-lucide="lock" class="step-icon" 
+                    <i data-lucide="share-2" class="step-icon" 
                        style="width: 40px; height: 40px; color: #f5a623;"></i>
                 </div>
                 <h3 class="h4 fw-semibold tracking-tight mb-3 step-title">Share</h3>
                 <p class="text-muted mb-4">
-                    Send the code or QR to the recipient through any messaging app
+                    Send the link or QR code to the recipient through any messaging app
                 </p>
             </div>
 
-            <!-- Arrow between Share and Transfer -->
-            <div class="col-md-1 text-center d-none d-md-flex justify-content-center align-items-center">
+            <div class="col-md-1 mt-0 mt-md-3 text-center d-flex justify-content-center align-items-center">
                 <i data-lucide="arrow-right" class="step-arrow" style="font-size: 2rem; color: #333;"></i>
             </div>
 
-            <!-- Step 3 -->
             <div class="col-md-3 text-center step-column" id="step-transfer" role="listitem">
                 <div class="d-inline-flex justify-content-center align-items-center rounded-circle step-icon bg-warning-soft mb-4"
                      style="width: 80px; height: 80px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
-                    <i data-lucide="zap" class="step-icon" 
+                    <i data-lucide="rocket" class="step-icon"
                        style="width: 40px; height: 40px; color: #f5a623;"></i>
                 </div>
                 <h3 class="h4 fw-semibold tracking-tight mb-3 step-title">Transfer</h3>
-                <p class="text-muted">
+                <p class="text-muted mb-4">
                     Files transfer directly between devices with no intermediary servers
                 </p>
             </div>
 
-            <!-- Mobile view: vertical arrows -->
-            <div class="d-md-none d-flex flex-column align-items-center">
-                <i data-lucide="arrow-down" class="step-arrow" 
-                   style="font-size: 2rem; color: #333; margin: 1rem 0;"></i>
-                <i data-lucide="arrow-down" class="step-arrow" 
-                   style="font-size: 2rem; color: #333; margin: 1rem 0;"></i>
-            </div>
         </div>
     </div>
 </section>
