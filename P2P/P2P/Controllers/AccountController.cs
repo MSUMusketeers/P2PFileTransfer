@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Mvc;
 using P2P.Models;
 using P2P.Context;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Authentication;
+using System.Security.Claims;
 namespace P2P.Controllers
 {
 
@@ -11,6 +15,61 @@ namespace P2P.Controllers
         public AccountController(ApplicationDbContext context)
         {
             _context = context;
+        }
+
+        public IActionResult GoogleLogin(string returnUrl = "/")
+        {
+            var properties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("GoogleCallback", "Account", new { returnUrl })
+            };
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        public async Task<IActionResult> GoogleCallback(string returnUrl = "/")
+        {
+
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            if (!result.Succeeded)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var claimsPrincipal = result.Principal;
+
+            var email = claimsPrincipal.FindFirstValue(ClaimTypes.Email);
+            var name = claimsPrincipal.FindFirstValue(ClaimTypes.Name);
+
+
+            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+
+            if (user == null)
+            {
+                user = new User
+                {
+                    Username = name,
+                    Email = email,
+                    Password = "GoogleUser"
+                };
+
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+            }
+
+            var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Email, user.Email)
+        };
+
+            var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var principal = new ClaimsPrincipal(identity);
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+            return RedirectToAction("Index", "Home", new { isAnonymous = false }); ;
         }
 
         [HttpGet]

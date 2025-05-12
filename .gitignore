@@ -1,6 +1,7 @@
 ## VS & VS Code folders
 .vs/
 .vscode/
+appsettings.Development.json
 
 ## Build artifacts
 bin/

@@ -71,17 +71,9 @@
 
                             <!-- Social Login -->
                             <div class="d-flex justify-content-center gap-3 mb-4">
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
-                                    <i class="fab fa-google"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
-                                    <i class="fab fa-apple"></i>
-                                </a>
-                                <a href="#" class="btn btn-outline-secondary rounded-circle p-2.5 social-btn">
-                                    <i class="fab fa-twitter"></i>
+                                <a asp-controller="Account" asp-action="GoogleLogin" class="google-login-btn d-flex align-items-center justify-content-center gap-2">
+                                    <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google logo" style="width:20px; height:20px;">
+                                    <span>Sign in with Google</span>
                                 </a>
                             </div>
 
@@ -100,6 +92,32 @@
 
 
 <style>
+    .google-login-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        border-radius: 12px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        color: #444;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+
+        .google-login-btn:hover {
+            background-color: #f7f7f7;
+            border-color: #ccc;
+            transform: translateY(-1px);
+            color: #111;
+        }
+
+        .google-login-btn img {
+            margin-right: 0.5rem;
+        }
     .signup-card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }

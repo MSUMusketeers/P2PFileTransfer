@@ -25,7 +25,7 @@
 
 1. Clone the repository:
    ```bash
-   https://github.com/MSUMusketeers/P2PFileTransfer.git
+   git clone https://github.com/MSUMusketeers/P2PFileTransfer.git
    cd P2P
 2. Restore the repository
    ```bash

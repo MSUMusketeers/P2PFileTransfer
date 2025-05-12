@@ -4,6 +4,8 @@ using Microsoft.Extensions.Hosting;
 using P2P.Context;
 using Microsoft.EntityFrameworkCore;
 using P2P.Hubs;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 namespace P2P.Models
 {
     public class Program
@@ -11,6 +13,25 @@ namespace P2P.Models
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+            })
+            .AddCookie()
+            .AddGoogle(options =>
+            {
+                options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+                options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+                options.CallbackPath = "/google-login";
+            });
+
+            builder.Services.AddSession(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true; // Ensure it works with cookie consent policies
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
