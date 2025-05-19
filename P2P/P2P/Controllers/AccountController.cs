@@ -55,8 +55,11 @@ namespace P2P.Controllers
 
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
+                var user2 = _context.Users.FirstOrDefaukt(u=> u.Email == email);
+                HttpContext.Session.SetInt32("user_id", user2.Id);
+            
             }
-
+            HttpContext.Session.SetInt32("user_id", user2.Id);
             var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
