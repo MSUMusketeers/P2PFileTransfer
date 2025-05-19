@@ -59,7 +59,9 @@ namespace P2P.Controllers
                 HttpContext.Session.SetInt32("user_id", user2.Id);
             
             }
-            HttpContext.Session.SetInt32("user_id", user.Id);
+            else{
+                HttpContext.Session.SetInt32("user_id", user.Id);
+            }
             var claims = new List<Claim>
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
