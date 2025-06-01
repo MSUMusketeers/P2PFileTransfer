@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrCodeElement = document.getElementById('qrcode');
     const cancelBtn = document.getElementById('cancel-transfer-btn');
     const sendAgainBtn = document.getElementById('send-again-btn');
+    const doneBtn = document.getElementById('done-btn');
     const sharingStatusTitle = document.getElementById('sharing-status-title');
     const progressLabel = document.getElementById('progress-label');
 
@@ -174,12 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const sharingSectionExists = !!sharingSection;
             const cancelBtnExists = !!cancelBtn;
             const sendAgainBtnExists = !!sendAgainBtn;
+            const doneBtnExists = !!doneBtn;
             const statusTitleExists = !!sharingStatusTitle;
             const progressLabelExists = !!progressLabel;
 
             // Default visibility
             if (cancelBtnExists) cancelBtn.style.display = 'none';
             if (sendAgainBtnExists) sendAgainBtn.style.display = 'none';
+            if (doneBtnExists) doneBtn.style.display = 'none';
             if (uploadSectionExists) uploadSection.style.display = 'none';
             if (sharingSectionExists) sharingSection.style.display = 'none';
 
@@ -223,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'transferComplete':
                     if (sharingSectionExists) sharingSection.style.display = 'block';
                     if (sendAgainBtnExists) sendAgainBtn.style.display = 'block';
+                    if (doneBtnExists) doneBtn.style.display = 'block';
                     if (statusTitleExists) sharingStatusTitle.textContent = 'Transfer Complete!';
                     if (progressLabelExists) progressLabel.textContent = 'Completed';
                     if (progressBar) {
@@ -466,6 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentFileNameElement) currentFileNameElement.textContent = 'Transfer Complete!';
                 if (fileNumberElement) fileNumberElement.textContent = '';
             });
+            showAlert(`Transfer complete. ${ senderFiles.length || 0} file(s) sent.`, 'success');
             // Close DataChannel after completion UI update attempt
             setTimeout(() => {
                 if (dataChannel && dataChannel.readyState === 'open') {

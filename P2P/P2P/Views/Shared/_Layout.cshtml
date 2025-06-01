@@ -19,14 +19,14 @@
 <body>
     <header class="sticky-top border-bottom bg-white" style="--bs-bg-opacity: 0.50; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
         <div class="container d-flex align-items-center" style="height: 64px;">
-            <a class="d-flex align-items-center gap-2 text-decoration-none" href="/Home/Index">
+            <a class="d-flex align-items-center gap-2 text-decoration-none" href="/Home/Index@(ViewData["isAnonymous"] != null && (bool)ViewData["isAnonymous"] == true ? "?isAnonymous=True" : "?isAnonymous=False")">
                 <span class="fs-4 fw-bold gradient-text">FileFlow</span>
             </a>
             <nav class="ms-auto d-flex gap-3 gap-sm-4" id="navbar">
-                <a href="/Home/Index#how-it-works" class="text-decoration-none small fw-medium text-muted hover-text-dark">
+                <a href="/Home/Index@(ViewData["isAnonymous"] != null && (bool)ViewData["isAnonymous"] == true ? "?isAnonymous=True" : "?isAnonymous=False")#how-it-works" class="text-decoration-none small fw-medium text-muted hover-text-dark">
                     How It Works
                 </a>
-                <a href="/Home/Index#features" class="text-decoration-none small fw-medium text-muted hover-text-dark">
+                <a href="/Home/Index@(ViewData["isAnonymous"] != null && (bool)ViewData["isAnonymous"] == true ? "?isAnonymous=True" : "?isAnonymous=False")#features" class="text-decoration-none small fw-medium text-muted hover-text-dark">
                     Features
                 </a>
                 <a id="History" asp-controller="DisplayTransferedFiles" asp-action="Index" class="text-decoration-none small fw-medium text-muted hover-text-dark">
@@ -49,7 +49,7 @@
                     </p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="https://github.com" target="_blank" rel="noreferrer" class="text-muted hover-text-dark me-3">
+                    <a href="https://github.com/MSUMusketeers/P2PFileTransfer" target="_blank" rel="noreferrer" class="text-muted hover-text-dark me-3">
                         <i data-lucide="github"></i>
                     </a>
                 </div>

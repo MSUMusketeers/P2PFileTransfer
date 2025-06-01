@@ -50,6 +50,10 @@
 						<button type="button" id="receiver-cancel-btn" class="btn btn-outline-danger w-100" style="display: none;">
 							Cancel Download
 						</button>
+						<button type="button" id="receiver-done-btn" class="btn btn-dark w-100" style="display: none;"
+						onclick="location.href='@Url.Action("Index", "Home", new { isAnonymous = ViewData["isAnonymous"] != null && (bool)ViewData["isAnonymous"] })'">
+							Done
+						</button>
 					</div>
 
 					<!-- File Confirmation Modal -->
