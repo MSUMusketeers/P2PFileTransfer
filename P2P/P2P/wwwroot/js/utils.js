@@ -7,6 +7,8 @@ function showAlert(message, type = 'info', duration = 5000) {
         return;
     }
 
+    alertContainer.style.display = "block"; // Ensure the container is visible when adding an alert
+
     const alertId = `alert-${Date.now()}`; // Unique ID for the alert
 
     const alertDiv = document.createElement('div');
@@ -42,6 +44,13 @@ function showAlert(message, type = 'info', duration = 5000) {
     // Render Lucide icons within the alert
     lucide.createIcons({ parent: alertDiv });
 
+    // Function to check if the container is empty
+    function checkAndHideContainer() {
+        if (alertContainer.children.length === 0) {
+            alertContainer.style.display = "none";
+        }
+    }
+
     // Auto-dismiss after duration
     if (duration > 0) {
         setTimeout(() => {
@@ -54,6 +63,7 @@ function showAlert(message, type = 'info', duration = 5000) {
                     // Fallback if bootstrap instance not found
                     alertElement.remove();
                 }
+                setTimeout(checkAndHideContainer, 500); // Wait for fade-out before checking
             }
         }, duration);
     }

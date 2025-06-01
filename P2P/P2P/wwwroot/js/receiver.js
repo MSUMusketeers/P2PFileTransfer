@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentFileNameElement = document.getElementById('recipient-file-name'); // Unique ID
     const fileNumberElement = document.getElementById('recipient-file-number');   // Unique ID
     const receiverCancelBtn = document.getElementById('receiver-cancel-btn');
+    const receiverDoneBtn = document.getElementById('receiver-done-btn');
     const modalElement = document.getElementById('fileConfirmModal');
     const modalFilesList = document.getElementById('modal-files-list');
     const modalLabel = document.getElementById('fileConfirmModalLabel');
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!mainStatusElement || !progressBar || !progressPercentage || !statsElement || !currentFileNameElement || !fileNumberElement || !receiverCancelBtn) return;
 
             receiverCancelBtn.style.display = 'none'; // Default hide
+            receiverDoneBtn.style.display = 'none';
             progressBar.classList.remove('bg-success', 'bg-danger'); // Remove status colors
             progressBar.classList.add('progress-bar-animated', 'bg-warning'); // Default appearance
 
@@ -100,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     receiverCancelBtn.style.display = 'block';
                     break; // Keep progress bar as is
                 case 'transferComplete':
+                    receiverDoneBtn.style.display = 'block';
                     mainStatusElement.textContent = 'Download Complete!';
                     progressBar.classList.remove('progress-bar-animated', 'bg-warning');
                     progressBar.classList.add('bg-success');
@@ -419,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle completion logic
         if (isEndOfTransfer && receiverState !== 'transferComplete') {
-            // send Meta Data to Server/Backend
+            // Send History Meta Data to Server/Backend
             sendMetaData();
             console.log("Processing transfer completion.");
             setState('transferComplete'); // Set state first
@@ -448,7 +451,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const result = await response.json();
             console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
-            alert(result.message);
         } catch (error) {
             console.error('Error:', error);
             alert('An error occurred while sending data.');

@@ -6,7 +6,7 @@
 }
 
 <section class="container py-5">
-    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1050; width: 350px;">
+    <div id="alert-container" class="position-fixed top-0 end-0 p-3" style="display: none; z-index: 1050; width: 350px;">
         <!-- Alerts will be injected here -->
     </div>
     <div class="text-center mx-auto mb-5" style="max-width: 800px;">
@@ -15,7 +15,7 @@
             <span class="gradient-text">no cloud required</span>
         </h1>
         <p class="lead text-muted">
-            Secure, fast, and simple peer-to-peer file transfers. No sign-up, no storage limits, no tracking.
+            Secure, fast, and simple peer-to-peer file transfers. No mandatory sign-up, no storage limits, no tracking.
         </p>
     </div>
 
@@ -34,7 +34,7 @@
                         <form id="sender-form">
                             <div class="text-center p-5 rounded border border-dashed" id="dropZone">
                                 <div class="d-inline-flex justify-content-center align-items-center rounded-circle bg-light mb-4" style="width: 80px; height: 80px;">
-                                    <i data-lucide="file" class="opacity-75"></i>
+                                    <i data-lucide="file" style="width: 32px; height: 32px; opacity: 0.75"></i>
                                 </div>
                                 <h3 class="h5 mb-3">Drag & drop your files here</h3>
                                 <p class="text-muted small mb-4">or click to browse files from your device</p>
@@ -72,7 +72,7 @@
                             <div class="d-flex align-items-center gap-3">
                                 <!-- Increased gap here -->
                                 <div id="share-link" class="fs-5 fw-bold tracking-tight gradient-text" style="overflow-wrap: anywhere;"></div>
-                                <button id="copy-link-btn" class="btn btn-light p-2" style="border: 0.5px solid #ccc;" title="Copy Link">
+                                <button id="copy-link-btn" class="btn btn-light p-1" style="border: 0.5px solid #ccc;" title="Copy Link">
                                     <i data-lucide="copy"></i>
                                 </button>
                             </div>
@@ -101,12 +101,15 @@
                             </div>
                         </div>
 
-                        <div class="mt-4 d-flex gap-2 justify-content-center">
+                        <div class="mt-4 d-flex flex-column gap-2 justify-content-center">
                             <button type="button" id="cancel-transfer-btn" class="btn btn-outline-danger w-100" style="display: none;">
                                 Cancel Transfer
                             </button>
                             <button type="button" id="send-again-btn" class="btn btn-dark w-100" style="display: none;">
                                 Share Again <i data-lucide="refresh-cw" class="ms-2" style="width:16px; height:16px;"></i>
+                            </button>
+                            <button type="button" id="done-btn" class="btn btn-dark w-100" onclick="location.href='@Url.Action("Index", "Home", new { isAnonymous = ViewData["isAnonymous"] != null && (bool)ViewData["isAnonymous"] })'">
+                                Done
                             </button>
                         </div>
                     </div>
@@ -166,14 +169,14 @@
                 copyBtn.addEventListener('click', function () {
                     const text = shareLink.textContent || shareLink.innerText;
                     if (!text.trim()) {
-                        alert("No link to copy!");
+                        showAlert("No link to copy!", "warning");
                         return;
                     }
 
                     navigator.clipboard.writeText(text)
                         .then(() => {
                             
-                            alert("Link is Copied");
+                            showAlert("Link copied", "success");
                             
                             setTimeout(() => {
                                 copyBtn.innerHTML = '<i data-lucide="copy"></i>';  // Revert to copy icon
@@ -182,7 +185,7 @@
                         })
                         .catch(err => {
                             console.error('Failed to copy:', err);
-                            alert('Failed to copy the link.');
+                            showAlert('Failed to copy the link.', 'danger');
                         });
                 });
             });

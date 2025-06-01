@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrCodeElement = document.getElementById('qrcode');
     const cancelBtn = document.getElementById('cancel-transfer-btn');
     const sendAgainBtn = document.getElementById('send-again-btn');
+    const doneBtn = document.getElementById('done-btn');
     const sharingStatusTitle = document.getElementById('sharing-status-title');
     const progressLabel = document.getElementById('progress-label');
 
@@ -174,12 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const sharingSectionExists = !!sharingSection;
             const cancelBtnExists = !!cancelBtn;
             const sendAgainBtnExists = !!sendAgainBtn;
+            const doneBtnExists = !!doneBtn;
             const statusTitleExists = !!sharingStatusTitle;
             const progressLabelExists = !!progressLabel;
 
             // Default visibility
             if (cancelBtnExists) cancelBtn.style.display = 'none';
             if (sendAgainBtnExists) sendAgainBtn.style.display = 'none';
+            if (doneBtnExists) doneBtn.style.display = 'none';
             if (uploadSectionExists) uploadSection.style.display = 'none';
             if (sharingSectionExists) sharingSection.style.display = 'none';
 
@@ -223,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 case 'transferComplete':
                     if (sharingSectionExists) sharingSection.style.display = 'block';
                     if (sendAgainBtnExists) sendAgainBtn.style.display = 'block';
+                    if (doneBtnExists) doneBtn.style.display = 'block';
                     if (statusTitleExists) sharingStatusTitle.textContent = 'Transfer Complete!';
                     if (progressLabelExists) progressLabel.textContent = 'Completed';
                     if (progressBar) {
@@ -457,6 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle completion logic
         if (isEndOfTransfer && senderState !== 'transferComplete') {
             console.log("Processing transfer completion.");
+            // Send History Meta data to Server/Backend
             sendMetaData();
             setState('transferComplete'); // Set state first
             // Update final stats text after state change
@@ -465,6 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentFileNameElement) currentFileNameElement.textContent = 'Transfer Complete!';
                 if (fileNumberElement) fileNumberElement.textContent = '';
             });
+            showAlert(`Transfer complete. ${ senderFiles.length || 0} file(s) sent.`, 'success');
             // Close DataChannel after completion UI update attempt
             setTimeout(() => {
                 if (dataChannel && dataChannel.readyState === 'open') {
@@ -492,7 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Only update file name/number if not complete state (setState handles final text)
             if (senderState !== 'transferComplete') {
-                currentFileNameElement.textContent = currentfile? currentFile.name : '';
+                currentFileNameElement.textContent = currentFile ? currentFile.name : '';
                 fileNumberElement.textContent = `(${currentFileIndex + 1}/${senderFiles.length})`;
             }
 
@@ -525,7 +531,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const result = await response.json();
             console.log(result.message); // Output: "User John Doe with email john.doe@example.com saved successfully!"
-            alert(result.message);
         } catch (error) {
             console.error('Error:', error);
             alert('An error occurred while sending data.');

@@ -143,3 +143,11 @@ body {
         padding: 1.5rem;
     }
 }
+
+/* For _HowItWorks.cshtml  */
+
+@media (max-width: 767px) {
+    .step-arrow {
+        transform: rotate(90deg); /* Rotates the arrow to point downward */
+    }
+}
